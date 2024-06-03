@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		B35CC39B2C0E743B007FBEFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC39A2C0E743B007FBEFC /* AppDelegate.swift */; };
 		B35CC39D2C0E743B007FBEFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC39C2C0E743B007FBEFC /* SceneDelegate.swift */; };
-		B35CC39F2C0E743B007FBEFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC39E2C0E743B007FBEFC /* ViewController.swift */; };
-		B35CC3A22C0E743B007FBEFC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B35CC3A12C0E743B007FBEFC /* Base */; };
 		B35CC3A42C0E743D007FBEFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35CC3A32C0E743D007FBEFC /* Assets.xcassets */; };
 		B35CC3A72C0E743D007FBEFC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B35CC3A62C0E743D007FBEFC /* Base */; };
 		B35CC3B22C0E743D007FBEFC /* StrivvyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3B12C0E743D007FBEFC /* StrivvyTests.swift */; };
 		B35CC3BC2C0E743D007FBEFC /* StrivvyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3BB2C0E743D007FBEFC /* StrivvyUITests.swift */; };
 		B35CC3BE2C0E743D007FBEFC /* StrivvyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3BD2C0E743D007FBEFC /* StrivvyUITestsLaunchTests.swift */; };
+		B35CC3CC2C0E7575007FBEFC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B35CC3CB2C0E7575007FBEFC /* SnapKit */; };
+		B35CC3CF2C0E758A007FBEFC /* JTAppleCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B35CC3CE2C0E758A007FBEFC /* JTAppleCalendar */; };
+		B35CC3D42C0E75C6007FBEFC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3D32C0E75C6007FBEFC /* HomeView.swift */; };
+		B35CC3D72C0E75D2007FBEFC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3D62C0E75D2007FBEFC /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,6 @@
 		B35CC3972C0E743B007FBEFC /* Strivvy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strivvy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35CC39A2C0E743B007FBEFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B35CC39C2C0E743B007FBEFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B35CC39E2C0E743B007FBEFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B35CC3A12C0E743B007FBEFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B35CC3A32C0E743D007FBEFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B35CC3A62C0E743D007FBEFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B35CC3A82C0E743D007FBEFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		B35CC3B72C0E743D007FBEFC /* StrivvyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrivvyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35CC3BB2C0E743D007FBEFC /* StrivvyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrivvyUITests.swift; sourceTree = "<group>"; };
 		B35CC3BD2C0E743D007FBEFC /* StrivvyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrivvyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B35CC3D32C0E75C6007FBEFC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B35CC3D62C0E75D2007FBEFC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B35CC3CC2C0E7575007FBEFC /* SnapKit in Frameworks */,
+				B35CC3CF2C0E758A007FBEFC /* JTAppleCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +103,10 @@
 		B35CC3992C0E743B007FBEFC /* Strivvy */ = {
 			isa = PBXGroup;
 			children = (
-				B35CC39A2C0E743B007FBEFC /* AppDelegate.swift */,
-				B35CC39C2C0E743B007FBEFC /* SceneDelegate.swift */,
-				B35CC39E2C0E743B007FBEFC /* ViewController.swift */,
-				B35CC3A02C0E743B007FBEFC /* Main.storyboard */,
+				B35CC3D82C0E7616007FBEFC /* Common */,
+				B35CC3D02C0E75A9007FBEFC /* Model */,
+				B35CC3D12C0E75AC007FBEFC /* View */,
+				B35CC3D22C0E75AF007FBEFC /* ViewModel */,
 				B35CC3A32C0E743D007FBEFC /* Assets.xcassets */,
 				B35CC3A52C0E743D007FBEFC /* LaunchScreen.storyboard */,
 				B35CC3A82C0E743D007FBEFC /* Info.plist */,
@@ -127,6 +131,46 @@
 			path = StrivvyUITests;
 			sourceTree = "<group>";
 		};
+		B35CC3D02C0E75A9007FBEFC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B35CC3D12C0E75AC007FBEFC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B35CC3D52C0E75C8007FBEFC /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B35CC3D22C0E75AF007FBEFC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B35CC3D52C0E75C8007FBEFC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B35CC3D32C0E75C6007FBEFC /* HomeView.swift */,
+				B35CC3D62C0E75D2007FBEFC /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B35CC3D82C0E7616007FBEFC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B35CC39A2C0E743B007FBEFC /* AppDelegate.swift */,
+				B35CC39C2C0E743B007FBEFC /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +187,10 @@
 			dependencies = (
 			);
 			name = Strivvy;
+			packageProductDependencies = (
+				B35CC3CB2C0E7575007FBEFC /* SnapKit */,
+				B35CC3CE2C0E758A007FBEFC /* JTAppleCalendar */,
+			);
 			productName = Strivvy;
 			productReference = B35CC3972C0E743B007FBEFC /* Strivvy.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +263,10 @@
 				Base,
 			);
 			mainGroup = B35CC38E2C0E743B007FBEFC;
+			packageReferences = (
+				B35CC3CA2C0E7575007FBEFC /* XCRemoteSwiftPackageReference "SnapKit" */,
+				B35CC3CD2C0E758A007FBEFC /* XCRemoteSwiftPackageReference "JTAppleCalendar" */,
+			);
 			productRefGroup = B35CC3982C0E743B007FBEFC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +285,6 @@
 			files = (
 				B35CC3A42C0E743D007FBEFC /* Assets.xcassets in Resources */,
 				B35CC3A72C0E743D007FBEFC /* Base in Resources */,
-				B35CC3A22C0E743B007FBEFC /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +309,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B35CC39F2C0E743B007FBEFC /* ViewController.swift in Sources */,
+				B35CC3D72C0E75D2007FBEFC /* HomeViewController.swift in Sources */,
+				B35CC3D42C0E75C6007FBEFC /* HomeView.swift in Sources */,
 				B35CC39B2C0E743B007FBEFC /* AppDelegate.swift in Sources */,
 				B35CC39D2C0E743B007FBEFC /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +349,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B35CC3A02C0E743B007FBEFC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B35CC3A12C0E743B007FBEFC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B35CC3A52C0E743D007FBEFC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -447,7 +491,6 @@
 				INFOPLIST_FILE = Strivvy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,7 +518,6 @@
 				INFOPLIST_FILE = Strivvy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -607,6 +649,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B35CC3CA2C0E7575007FBEFC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		B35CC3CD2C0E758A007FBEFC /* XCRemoteSwiftPackageReference "JTAppleCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/patchthecode/JTAppleCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B35CC3CB2C0E7575007FBEFC /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B35CC3CA2C0E7575007FBEFC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		B35CC3CE2C0E758A007FBEFC /* JTAppleCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B35CC3CD2C0E758A007FBEFC /* XCRemoteSwiftPackageReference "JTAppleCalendar" */;
+			productName = JTAppleCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B35CC38F2C0E743B007FBEFC /* Project object */;
 }

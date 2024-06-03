@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B35CC39B2C0E743B007FBEFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC39A2C0E743B007FBEFC /* AppDelegate.swift */; };
+		B35CC39D2C0E743B007FBEFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC39C2C0E743B007FBEFC /* SceneDelegate.swift */; };
+		B35CC39F2C0E743B007FBEFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC39E2C0E743B007FBEFC /* ViewController.swift */; };
+		B35CC3A22C0E743B007FBEFC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B35CC3A12C0E743B007FBEFC /* Base */; };
+		B35CC3A42C0E743D007FBEFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35CC3A32C0E743D007FBEFC /* Assets.xcassets */; };
+		B35CC3A72C0E743D007FBEFC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B35CC3A62C0E743D007FBEFC /* Base */; };
+		B35CC3B22C0E743D007FBEFC /* StrivvyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3B12C0E743D007FBEFC /* StrivvyTests.swift */; };
+		B35CC3BC2C0E743D007FBEFC /* StrivvyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3BB2C0E743D007FBEFC /* StrivvyUITests.swift */; };
+		B35CC3BE2C0E743D007FBEFC /* StrivvyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3BD2C0E743D007FBEFC /* StrivvyUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B35CC3AE2C0E743D007FBEFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B35CC38F2C0E743B007FBEFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B35CC3962C0E743B007FBEFC;
+			remoteInfo = Strivvy;
+		};
+		B35CC3B82C0E743D007FBEFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B35CC38F2C0E743B007FBEFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B35CC3962C0E743B007FBEFC;
+			remoteInfo = Strivvy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B35CC3972C0E743B007FBEFC /* Strivvy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strivvy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B35CC39A2C0E743B007FBEFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B35CC39C2C0E743B007FBEFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B35CC39E2C0E743B007FBEFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B35CC3A12C0E743B007FBEFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B35CC3A32C0E743D007FBEFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B35CC3A62C0E743D007FBEFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B35CC3A82C0E743D007FBEFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B35CC3AD2C0E743D007FBEFC /* StrivvyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrivvyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B35CC3B12C0E743D007FBEFC /* StrivvyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrivvyTests.swift; sourceTree = "<group>"; };
+		B35CC3B72C0E743D007FBEFC /* StrivvyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrivvyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B35CC3BB2C0E743D007FBEFC /* StrivvyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrivvyUITests.swift; sourceTree = "<group>"; };
+		B35CC3BD2C0E743D007FBEFC /* StrivvyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrivvyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B35CC3942C0E743B007FBEFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B35CC3AA2C0E743D007FBEFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B35CC3B42C0E743D007FBEFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B35CC38E2C0E743B007FBEFC = {
+			isa = PBXGroup;
+			children = (
+				B35CC3992C0E743B007FBEFC /* Strivvy */,
+				B35CC3B02C0E743D007FBEFC /* StrivvyTests */,
+				B35CC3BA2C0E743D007FBEFC /* StrivvyUITests */,
+				B35CC3982C0E743B007FBEFC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B35CC3982C0E743B007FBEFC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B35CC3972C0E743B007FBEFC /* Strivvy.app */,
+				B35CC3AD2C0E743D007FBEFC /* StrivvyTests.xctest */,
+				B35CC3B72C0E743D007FBEFC /* StrivvyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B35CC3992C0E743B007FBEFC /* Strivvy */ = {
+			isa = PBXGroup;
+			children = (
+				B35CC39A2C0E743B007FBEFC /* AppDelegate.swift */,
+				B35CC39C2C0E743B007FBEFC /* SceneDelegate.swift */,
+				B35CC39E2C0E743B007FBEFC /* ViewController.swift */,
+				B35CC3A02C0E743B007FBEFC /* Main.storyboard */,
+				B35CC3A32C0E743D007FBEFC /* Assets.xcassets */,
+				B35CC3A52C0E743D007FBEFC /* LaunchScreen.storyboard */,
+				B35CC3A82C0E743D007FBEFC /* Info.plist */,
+			);
+			path = Strivvy;
+			sourceTree = "<group>";
+		};
+		B35CC3B02C0E743D007FBEFC /* StrivvyTests */ = {
+			isa = PBXGroup;
+			children = (
+				B35CC3B12C0E743D007FBEFC /* StrivvyTests.swift */,
+			);
+			path = StrivvyTests;
+			sourceTree = "<group>";
+		};
+		B35CC3BA2C0E743D007FBEFC /* StrivvyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B35CC3BB2C0E743D007FBEFC /* StrivvyUITests.swift */,
+				B35CC3BD2C0E743D007FBEFC /* StrivvyUITestsLaunchTests.swift */,
+			);
+			path = StrivvyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B35CC3962C0E743B007FBEFC /* Strivvy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B35CC3C12C0E743D007FBEFC /* Build configuration list for PBXNativeTarget "Strivvy" */;
+			buildPhases = (
+				B35CC3932C0E743B007FBEFC /* Sources */,
+				B35CC3942C0E743B007FBEFC /* Frameworks */,
+				B35CC3952C0E743B007FBEFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Strivvy;
+			productName = Strivvy;
+			productReference = B35CC3972C0E743B007FBEFC /* Strivvy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B35CC3AC2C0E743D007FBEFC /* StrivvyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B35CC3C42C0E743D007FBEFC /* Build configuration list for PBXNativeTarget "StrivvyTests" */;
+			buildPhases = (
+				B35CC3A92C0E743D007FBEFC /* Sources */,
+				B35CC3AA2C0E743D007FBEFC /* Frameworks */,
+				B35CC3AB2C0E743D007FBEFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B35CC3AF2C0E743D007FBEFC /* PBXTargetDependency */,
+			);
+			name = StrivvyTests;
+			productName = StrivvyTests;
+			productReference = B35CC3AD2C0E743D007FBEFC /* StrivvyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B35CC3B62C0E743D007FBEFC /* StrivvyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B35CC3C72C0E743D007FBEFC /* Build configuration list for PBXNativeTarget "StrivvyUITests" */;
+			buildPhases = (
+				B35CC3B32C0E743D007FBEFC /* Sources */,
+				B35CC3B42C0E743D007FBEFC /* Frameworks */,
+				B35CC3B52C0E743D007FBEFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B35CC3B92C0E743D007FBEFC /* PBXTargetDependency */,
+			);
+			name = StrivvyUITests;
+			productName = StrivvyUITests;
+			productReference = B35CC3B72C0E743D007FBEFC /* StrivvyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B35CC38F2C0E743B007FBEFC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					B35CC3962C0E743B007FBEFC = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					B35CC3AC2C0E743D007FBEFC = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = B35CC3962C0E743B007FBEFC;
+					};
+					B35CC3B62C0E743D007FBEFC = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = B35CC3962C0E743B007FBEFC;
+					};
+				};
+			};
+			buildConfigurationList = B35CC3922C0E743B007FBEFC /* Build configuration list for PBXProject "Strivvy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B35CC38E2C0E743B007FBEFC;
+			productRefGroup = B35CC3982C0E743B007FBEFC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B35CC3962C0E743B007FBEFC /* Strivvy */,
+				B35CC3AC2C0E743D007FBEFC /* StrivvyTests */,
+				B35CC3B62C0E743D007FBEFC /* StrivvyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B35CC3952C0E743B007FBEFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B35CC3A42C0E743D007FBEFC /* Assets.xcassets in Resources */,
+				B35CC3A72C0E743D007FBEFC /* Base in Resources */,
+				B35CC3A22C0E743B007FBEFC /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B35CC3AB2C0E743D007FBEFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B35CC3B52C0E743D007FBEFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B35CC3932C0E743B007FBEFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B35CC39F2C0E743B007FBEFC /* ViewController.swift in Sources */,
+				B35CC39B2C0E743B007FBEFC /* AppDelegate.swift in Sources */,
+				B35CC39D2C0E743B007FBEFC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B35CC3A92C0E743D007FBEFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B35CC3B22C0E743D007FBEFC /* StrivvyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B35CC3B32C0E743D007FBEFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B35CC3BE2C0E743D007FBEFC /* StrivvyUITestsLaunchTests.swift in Sources */,
+				B35CC3BC2C0E743D007FBEFC /* StrivvyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B35CC3AF2C0E743D007FBEFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B35CC3962C0E743B007FBEFC /* Strivvy */;
+			targetProxy = B35CC3AE2C0E743D007FBEFC /* PBXContainerItemProxy */;
+		};
+		B35CC3B92C0E743D007FBEFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B35CC3962C0E743B007FBEFC /* Strivvy */;
+			targetProxy = B35CC3B82C0E743D007FBEFC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B35CC3A02C0E743B007FBEFC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B35CC3A12C0E743B007FBEFC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B35CC3A52C0E743D007FBEFC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B35CC3A62C0E743D007FBEFC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B35CC3BF2C0E743D007FBEFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B35CC3C02C0E743D007FBEFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B35CC3C22C0E743D007FBEFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7U55BCTM6U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Strivvy/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.mnhz.Strivvy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B35CC3C32C0E743D007FBEFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7U55BCTM6U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Strivvy/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.mnhz.Strivvy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B35CC3C52C0E743D007FBEFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7U55BCTM6U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.mnhz.StrivvyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Strivvy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Strivvy";
+			};
+			name = Debug;
+		};
+		B35CC3C62C0E743D007FBEFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7U55BCTM6U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.mnhz.StrivvyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Strivvy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Strivvy";
+			};
+			name = Release;
+		};
+		B35CC3C82C0E743D007FBEFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7U55BCTM6U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.mnhz.StrivvyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Strivvy;
+			};
+			name = Debug;
+		};
+		B35CC3C92C0E743D007FBEFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7U55BCTM6U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.mnhz.StrivvyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Strivvy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B35CC3922C0E743B007FBEFC /* Build configuration list for PBXProject "Strivvy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B35CC3BF2C0E743D007FBEFC /* Debug */,
+				B35CC3C02C0E743D007FBEFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B35CC3C12C0E743D007FBEFC /* Build configuration list for PBXNativeTarget "Strivvy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B35CC3C22C0E743D007FBEFC /* Debug */,
+				B35CC3C32C0E743D007FBEFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B35CC3C42C0E743D007FBEFC /* Build configuration list for PBXNativeTarget "StrivvyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B35CC3C52C0E743D007FBEFC /* Debug */,
+				B35CC3C62C0E743D007FBEFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B35CC3C72C0E743D007FBEFC /* Build configuration list for PBXNativeTarget "StrivvyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B35CC3C82C0E743D007FBEFC /* Debug */,
+				B35CC3C92C0E743D007FBEFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B35CC38F2C0E743B007FBEFC /* Project object */;
+}

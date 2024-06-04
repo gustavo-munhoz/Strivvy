@@ -16,8 +16,10 @@
 		B35CC3BE2C0E743D007FBEFC /* StrivvyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3BD2C0E743D007FBEFC /* StrivvyUITestsLaunchTests.swift */; };
 		B35CC3CC2C0E7575007FBEFC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B35CC3CB2C0E7575007FBEFC /* SnapKit */; };
 		B35CC3CF2C0E758A007FBEFC /* JTAppleCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B35CC3CE2C0E758A007FBEFC /* JTAppleCalendar */; };
-		B35CC3D42C0E75C6007FBEFC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3D32C0E75C6007FBEFC /* HomeView.swift */; };
-		B35CC3D72C0E75D2007FBEFC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3D62C0E75D2007FBEFC /* HomeViewController.swift */; };
+		B35CC3D42C0E75C6007FBEFC /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3D32C0E75C6007FBEFC /* CalendarView.swift */; };
+		B35CC3D72C0E75D2007FBEFC /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3D62C0E75D2007FBEFC /* CalendarViewController.swift */; };
+		B35CC3DC2C0EB87E007FBEFC /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3DB2C0EB87E007FBEFC /* CalendarCell.swift */; };
+		B35CC3DF2C0EB985007FBEFC /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3DE2C0EB985007FBEFC /* UIColor+ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +51,10 @@
 		B35CC3B72C0E743D007FBEFC /* StrivvyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrivvyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35CC3BB2C0E743D007FBEFC /* StrivvyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrivvyUITests.swift; sourceTree = "<group>"; };
 		B35CC3BD2C0E743D007FBEFC /* StrivvyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrivvyUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		B35CC3D32C0E75C6007FBEFC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		B35CC3D62C0E75D2007FBEFC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B35CC3D32C0E75C6007FBEFC /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		B35CC3D62C0E75D2007FBEFC /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		B35CC3DB2C0EB87E007FBEFC /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		B35CC3DE2C0EB985007FBEFC /* UIColor+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				B35CC3D02C0E75A9007FBEFC /* Model */,
 				B35CC3D12C0E75AC007FBEFC /* View */,
 				B35CC3D22C0E75AF007FBEFC /* ViewModel */,
+				B35CC3D92C0E781E007FBEFC /* Coordinator */,
+				B35CC3DD2C0EB97B007FBEFC /* +ext */,
 				B35CC3A32C0E743D007FBEFC /* Assets.xcassets */,
 				B35CC3A52C0E743D007FBEFC /* LaunchScreen.storyboard */,
 				B35CC3A82C0E743D007FBEFC /* Info.plist */,
@@ -141,7 +147,7 @@
 		B35CC3D12C0E75AC007FBEFC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B35CC3D52C0E75C8007FBEFC /* Home */,
+				B35CC3D52C0E75C8007FBEFC /* Calendar */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,13 +159,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		B35CC3D52C0E75C8007FBEFC /* Home */ = {
+		B35CC3D52C0E75C8007FBEFC /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				B35CC3D32C0E75C6007FBEFC /* HomeView.swift */,
-				B35CC3D62C0E75D2007FBEFC /* HomeViewController.swift */,
+				B35CC3D32C0E75C6007FBEFC /* CalendarView.swift */,
+				B35CC3D62C0E75D2007FBEFC /* CalendarViewController.swift */,
+				B35CC3DB2C0EB87E007FBEFC /* CalendarCell.swift */,
 			);
-			path = Home;
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		B35CC3D82C0E7616007FBEFC /* Common */ = {
@@ -169,6 +176,21 @@
 				B35CC39C2C0E743B007FBEFC /* SceneDelegate.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		B35CC3D92C0E781E007FBEFC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B35CC3DD2C0EB97B007FBEFC /* +ext */ = {
+			isa = PBXGroup;
+			children = (
+				B35CC3DE2C0EB985007FBEFC /* UIColor+ext.swift */,
+			);
+			path = "+ext";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,10 +331,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B35CC3D72C0E75D2007FBEFC /* HomeViewController.swift in Sources */,
-				B35CC3D42C0E75C6007FBEFC /* HomeView.swift in Sources */,
+				B35CC3D72C0E75D2007FBEFC /* CalendarViewController.swift in Sources */,
+				B35CC3D42C0E75C6007FBEFC /* CalendarView.swift in Sources */,
 				B35CC39B2C0E743B007FBEFC /* AppDelegate.swift in Sources */,
 				B35CC39D2C0E743B007FBEFC /* SceneDelegate.swift in Sources */,
+				B35CC3DC2C0EB87E007FBEFC /* CalendarCell.swift in Sources */,
+				B35CC3DF2C0EB985007FBEFC /* UIColor+ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

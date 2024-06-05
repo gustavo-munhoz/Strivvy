@@ -18,6 +18,8 @@ class CalendarCell: JTACDayCell {
         view.textAlignment = .center
         view.textColor = .primary
         
+        view.font = .preferredFont(forTextStyle: .body)
+        
         return view
     }()
     
@@ -33,7 +35,7 @@ class CalendarCell: JTACDayCell {
     private func setupSubviews() {
         contentView.addSubview(dayLabel)
         dayLabel.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.edges.equalToSuperview()            
         }
     }
     

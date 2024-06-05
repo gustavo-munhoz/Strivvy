@@ -12,8 +12,18 @@ import JTAppleCalendar
 class CalendarHeaderView: JTACMonthReusableView {
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false    
+        label.textColor = .primary        
+        let fd = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .title1)
+        
+        let customFd = fd.addingAttributes([
+            .traits: [
+                UIFontDescriptor.TraitKey.weight: UIFont.Weight.bold
+            ]
+        ])
+        
+        label.font = UIFont(descriptor: customFd, size: 0)
+        
         return label
     }()
     

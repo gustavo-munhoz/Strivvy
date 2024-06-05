@@ -39,12 +39,19 @@ class CalendarViewController: UIViewController {
 }
 
 extension CalendarViewController: JTACMonthViewDataSource {
-    func configureCalendar(_ calendar: JTAppleCalendar.JTACMonthView) -> JTAppleCalendar.ConfigurationParameters {
-        // TODO: Alterar depois de pronto
+    func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
+        // TODO: Depois de pronto, arrumar as datas iniciais
         let startDate = Date()
         let endDate = Calendar.current.date(byAdding: .month, value: 3, to: startDate)!
         
-        return ConfigurationParameters(startDate: startDate, endDate: endDate)
+        return ConfigurationParameters(
+            startDate: startDate,
+            endDate: endDate,
+            generateInDates: .forAllMonths,
+            generateOutDates: .off,
+            firstDayOfWeek: .sunday,
+            hasStrictBoundaries: true
+        )
     }
 }
 
@@ -60,9 +67,10 @@ extension CalendarViewController: JTACMonthViewDelegate {
         ) as! CalendarCell
         
         cell.configure(with: cellState.text)
+        handleCellAppearance(cell: cell, cellState: cellState)
         
         return cell
-    }
+    }        
     
     func calendar(_ calendar: JTACMonthView, headerViewForDateRange range: (start: Date, end: Date), at indexPath: IndexPath) -> JTACMonthReusableView {
         let header = calendar.dequeueReusableJTAppleSupplementaryView(
@@ -72,5 +80,17 @@ extension CalendarViewController: JTACMonthViewDelegate {
         
         header.configure(with: range.start)
         return header
+    }
+    
+    func calendarSizeForMonths(_ calendar: JTACMonthView?) -> MonthSize? {
+        return MonthSize(defaultSize: 75)
+    }
+    
+    private func handleCellAppearance(cell: CalendarCell, cellState: CellState) {
+        if cellState.dateBelongsTo == .thisMonth {
+            cell.contentView.alpha = 1.0
+        } else {
+            cell.contentView.alpha = 0.5
+        }
     }
 }

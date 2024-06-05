@@ -14,7 +14,8 @@ class CalendarView: UIView {
     private(set) lazy var weekDaysView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .darkGray
+        view.backgroundColor = .systemBackground
+        
         return view
     }()
     
@@ -51,15 +52,19 @@ class CalendarView: UIView {
         }
         
         calendarView.snp.makeConstraints { make in
-            make.top.equalTo(weekDaysView.snp.bottom)
-            make.leading.trailing.bottom.equalToSuperview()
+            make.top.equalTo(weekDaysView.snp.bottom).offset(32)
+            make.leading.equalToSuperview().offset(12)
+            make.trailing.equalToSuperview().offset(-12)
+            make.bottom.equalTo(safeAreaLayoutGuide)
         }
     }
     
     private func setupCalendar() {
         calendarView.scrollDirection = .vertical
-        calendarView.scrollingMode = .stopAtEachCalendarFrame
+        calendarView.scrollingMode = .stopAtEachSection
         calendarView.showsHorizontalScrollIndicator = false
+        calendarView.showsVerticalScrollIndicator = false
+        calendarView.cellSize = 75        
     }
     
     private func setupWeekDays() {

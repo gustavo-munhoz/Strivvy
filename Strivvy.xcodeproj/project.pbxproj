@@ -20,6 +20,9 @@
 		B35CC3D72C0E75D2007FBEFC /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3D62C0E75D2007FBEFC /* CalendarViewController.swift */; };
 		B35CC3DC2C0EB87E007FBEFC /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3DB2C0EB87E007FBEFC /* CalendarCell.swift */; };
 		B35CC3DF2C0EB985007FBEFC /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3DE2C0EB985007FBEFC /* UIColor+ext.swift */; };
+		B35CC3E12C100B0D007FBEFC /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B35CC3E02C100B0D007FBEFC /* Localizable.xcstrings */; };
+		B35CC3E32C100B3D007FBEFC /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3E22C100B3D007FBEFC /* LocalizedString.swift */; };
+		B35CC3E62C100C93007FBEFC /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC3E52C100C93007FBEFC /* CalendarHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		B35CC3D62C0E75D2007FBEFC /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		B35CC3DB2C0EB87E007FBEFC /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		B35CC3DE2C0EB985007FBEFC /* UIColor+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
+		B35CC3E02C100B0D007FBEFC /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		B35CC3E22C100B3D007FBEFC /* LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
+		B35CC3E52C100C93007FBEFC /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,9 +168,9 @@
 		B35CC3D52C0E75C8007FBEFC /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				B35CC3E42C100BE6007FBEFC /* CollectionView */,
 				B35CC3D32C0E75C6007FBEFC /* CalendarView.swift */,
 				B35CC3D62C0E75D2007FBEFC /* CalendarViewController.swift */,
-				B35CC3DB2C0EB87E007FBEFC /* CalendarCell.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -174,6 +180,8 @@
 			children = (
 				B35CC39A2C0E743B007FBEFC /* AppDelegate.swift */,
 				B35CC39C2C0E743B007FBEFC /* SceneDelegate.swift */,
+				B35CC3E02C100B0D007FBEFC /* Localizable.xcstrings */,
+				B35CC3E22C100B3D007FBEFC /* LocalizedString.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -191,6 +199,15 @@
 				B35CC3DE2C0EB985007FBEFC /* UIColor+ext.swift */,
 			);
 			path = "+ext";
+			sourceTree = "<group>";
+		};
+		B35CC3E42C100BE6007FBEFC /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				B35CC3DB2C0EB87E007FBEFC /* CalendarCell.swift */,
+				B35CC3E52C100C93007FBEFC /* CalendarHeaderView.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +324,7 @@
 			files = (
 				B35CC3A42C0E743D007FBEFC /* Assets.xcassets in Resources */,
 				B35CC3A72C0E743D007FBEFC /* Base in Resources */,
+				B35CC3E12C100B0D007FBEFC /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,8 +350,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B35CC3D72C0E75D2007FBEFC /* CalendarViewController.swift in Sources */,
+				B35CC3E62C100C93007FBEFC /* CalendarHeaderView.swift in Sources */,
 				B35CC3D42C0E75C6007FBEFC /* CalendarView.swift in Sources */,
 				B35CC39B2C0E743B007FBEFC /* AppDelegate.swift in Sources */,
+				B35CC3E32C100B3D007FBEFC /* LocalizedString.swift in Sources */,
 				B35CC39D2C0E743B007FBEFC /* SceneDelegate.swift in Sources */,
 				B35CC3DC2C0EB87E007FBEFC /* CalendarCell.swift in Sources */,
 				B35CC3DF2C0EB985007FBEFC /* UIColor+ext.swift in Sources */,
@@ -436,7 +456,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -493,7 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -513,6 +533,8 @@
 				DEVELOPMENT_TEAM = 7U55BCTM6U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Strivvy/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Strivvy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -521,7 +543,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.mnhz.Strivvy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -540,6 +562,8 @@
 				DEVELOPMENT_TEAM = 7U55BCTM6U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Strivvy/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Strivvy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -548,7 +572,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.mnhz.Strivvy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -30,7 +30,11 @@ class CalendarViewController: UIViewController {
         calendarView.calendarView.calendarDataSource = self
         calendarView.calendarView.calendarDelegate = self
         calendarView.calendarView.register(CalendarCell.self, forCellWithReuseIdentifier: String(describing: CalendarCell.self))
-        
+        calendarView.calendarView.register(
+            CalendarHeaderView.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: String(describing: CalendarHeaderView.self)
+        )
     }
 }
 
@@ -57,8 +61,16 @@ extension CalendarViewController: JTACMonthViewDelegate {
         
         cell.configure(with: cellState.text)
         
-        logger.debug("Setup CalendarCell for item: \(indexPath.item)")
-        
         return cell
+    }
+    
+    func calendar(_ calendar: JTACMonthView, headerViewForDateRange range: (start: Date, end: Date), at indexPath: IndexPath) -> JTACMonthReusableView {
+        let header = calendar.dequeueReusableJTAppleSupplementaryView(
+            withReuseIdentifier: String(describing: CalendarHeaderView.self),
+            for: indexPath
+        ) as! CalendarHeaderView
+        
+        header.configure(with: range.start)
+        return header
     }
 }

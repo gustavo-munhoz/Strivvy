@@ -16,7 +16,7 @@ class CalendarCell: JTACDayCell {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textAlignment = .center
-        view.textColor = .red
+        view.textColor = .primary
         
         return view
     }()

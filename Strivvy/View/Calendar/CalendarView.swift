@@ -11,6 +11,13 @@ import SnapKit
 
 class CalendarView: UIView {
     
+    private(set) lazy var weekDaysView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .darkGray
+        return view
+    }()
+    
     private(set) lazy var calendarView: JTACMonthView = {
         let view = JTACMonthView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -23,6 +30,7 @@ class CalendarView: UIView {
         super.init(frame: frame)
         addSubviews()
         setupConstraints()
+        setupWeekDays()
         setupCalendar()
     }
     
@@ -31,12 +39,20 @@ class CalendarView: UIView {
     }
     
     private func addSubviews() {
+        addSubview(weekDaysView)
         addSubview(calendarView)
     }
     
     private func setupConstraints() {
+        weekDaysView.snp.makeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(30)
+        }
+        
         calendarView.snp.makeConstraints { make in
-            make.edges.equalTo(safeAreaLayoutGuide)
+            make.top.equalTo(weekDaysView.snp.bottom)
+            make.leading.trailing.bottom.equalToSuperview()
         }
     }
     
@@ -44,6 +60,25 @@ class CalendarView: UIView {
         calendarView.scrollDirection = .vertical
         calendarView.scrollingMode = .stopAtEachCalendarFrame
         calendarView.showsHorizontalScrollIndicator = false
+    }
+    
+    private func setupWeekDays() {
+        let weekDays = LocalizedString.weekDays
+        for (index, day) in weekDays.enumerated() {
+            let label = UILabel()
+            label.text = day
+            label.textAlignment = .center
+            weekDaysView.addSubview(label)
+            label.snp.makeConstraints { make in
+                make.top.bottom.equalToSuperview()
+                make.width.equalTo(weekDaysView).dividedBy(7)
+                if index == 0 {
+                    make.leading.equalToSuperview()
+                } else {
+                    make.leading.equalTo(weekDaysView.subviews[index - 1].snp.trailing)
+                }
+            }
+        }
     }
 }
 

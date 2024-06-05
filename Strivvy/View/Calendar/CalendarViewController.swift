@@ -36,6 +36,31 @@ class CalendarViewController: UIViewController {
             withReuseIdentifier: String(describing: CalendarHeaderView.self)
         )
     }
+    
+    private func presentDayRecordView(for date: Date) {
+        logger.debug("Presenting sheet for date: \(date)")
+        
+        let viewController = DayRecordViewController(date: date)    
+        
+        viewController.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .close, target: self, action: #selector(closeSheet))
+        
+        let navController = UINavigationController(rootViewController: viewController)
+        
+        navController.modalPresentationStyle = .pageSheet
+        if let sheet = navController.sheetPresentationController {
+            sheet.largestUndimmedDetentIdentifier = nil
+            sheet.prefersGrabberVisible = true
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = true
+            sheet.prefersEdgeAttachedInCompactHeight = true
+            sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+        }
+        
+        present(navController, animated: true, completion: nil)
+    }
+    
+    @objc func closeSheet() {
+        self.dismiss(animated: true)
+    }
 }
 
 extension CalendarViewController: JTACMonthViewDataSource {
@@ -50,7 +75,7 @@ extension CalendarViewController: JTACMonthViewDataSource {
             generateInDates: .forAllMonths,
             generateOutDates: .off,
             firstDayOfWeek: .sunday,
-            hasStrictBoundaries: true
+            hasStrictBoundaries: true            
         )
     }
 }
@@ -58,6 +83,10 @@ extension CalendarViewController: JTACMonthViewDataSource {
 extension CalendarViewController: JTACMonthViewDelegate {
     func calendar(_ calendar: JTAppleCalendar.JTACMonthView, willDisplay cell: JTAppleCalendar.JTACDayCell, forItemAt date: Date, cellState: JTAppleCalendar.CellState, indexPath: IndexPath) {
         return
+    }
+    
+    func calendar(_ calendar: JTACMonthView, didSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
+        presentDayRecordView(for: date)
     }
     
     func calendar(_ calendar: JTAppleCalendar.JTACMonthView, cellForItemAt date: Date, cellState: JTAppleCalendar.CellState, indexPath: IndexPath) -> JTAppleCalendar.JTACDayCell {

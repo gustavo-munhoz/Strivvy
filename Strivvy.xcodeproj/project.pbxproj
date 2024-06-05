@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B33DDB7D2C112D4B00ADAF95 /* DayRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DDB7C2C112D4B00ADAF95 /* DayRecordView.swift */; };
+		B33DDB7F2C11327200ADAF95 /* DayRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DDB7E2C11327200ADAF95 /* DayRecordViewController.swift */; };
 		B35CC39B2C0E743B007FBEFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC39A2C0E743B007FBEFC /* AppDelegate.swift */; };
 		B35CC39D2C0E743B007FBEFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC39C2C0E743B007FBEFC /* SceneDelegate.swift */; };
 		B35CC3A42C0E743D007FBEFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35CC3A32C0E743D007FBEFC /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B33DDB7C2C112D4B00ADAF95 /* DayRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRecordView.swift; sourceTree = "<group>"; };
+		B33DDB7E2C11327200ADAF95 /* DayRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRecordViewController.swift; sourceTree = "<group>"; };
 		B35CC3972C0E743B007FBEFC /* Strivvy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strivvy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35CC39A2C0E743B007FBEFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B35CC39C2C0E743B007FBEFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B33DDB7B2C112D4100ADAF95 /* DayRecord */ = {
+			isa = PBXGroup;
+			children = (
+				B33DDB7C2C112D4B00ADAF95 /* DayRecordView.swift */,
+				B33DDB7E2C11327200ADAF95 /* DayRecordViewController.swift */,
+			);
+			path = DayRecord;
+			sourceTree = "<group>";
+		};
 		B35CC38E2C0E743B007FBEFC = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +166,7 @@
 		B35CC3D12C0E75AC007FBEFC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B33DDB7B2C112D4100ADAF95 /* DayRecord */,
 				B35CC3D52C0E75C8007FBEFC /* Calendar */,
 			);
 			path = View;
@@ -349,11 +363,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B33DDB7F2C11327200ADAF95 /* DayRecordViewController.swift in Sources */,
 				B35CC3D72C0E75D2007FBEFC /* CalendarViewController.swift in Sources */,
 				B35CC3E62C100C93007FBEFC /* CalendarHeaderView.swift in Sources */,
 				B35CC3D42C0E75C6007FBEFC /* CalendarView.swift in Sources */,
 				B35CC39B2C0E743B007FBEFC /* AppDelegate.swift in Sources */,
 				B35CC3E32C100B3D007FBEFC /* LocalizedString.swift in Sources */,
+				B33DDB7D2C112D4B00ADAF95 /* DayRecordView.swift in Sources */,
 				B35CC39D2C0E743B007FBEFC /* SceneDelegate.swift in Sources */,
 				B35CC3DC2C0EB87E007FBEFC /* CalendarCell.swift in Sources */,
 				B35CC3DF2C0EB985007FBEFC /* UIColor+ext.swift in Sources */,
@@ -529,7 +545,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 7U55BCTM6U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Strivvy/Info.plist;
@@ -558,7 +574,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 7U55BCTM6U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Strivvy/Info.plist;

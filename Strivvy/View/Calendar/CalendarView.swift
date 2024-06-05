@@ -64,7 +64,8 @@ class CalendarView: UIView {
         calendarView.scrollingMode = .stopAtEachSection
         calendarView.showsHorizontalScrollIndicator = false
         calendarView.showsVerticalScrollIndicator = false
-        calendarView.cellSize = 75        
+        calendarView.allowsSelection = true
+        calendarView.cellSize = 75
     }
     
     private func setupWeekDays() {

@@ -28,23 +28,35 @@ class DayRecordView: UIView {
         return label
     }()
     
+    private lazy var imageContainerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .lightGray
+        view.layer.cornerRadius = 10
+        view.clipsToBounds = true
+        
+        // TODO: Implementar opção de tirar foto ou escolher da biblioteca
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapImageView))
+        view.addGestureRecognizer(tapGesture)
+        
+        view.addSubview(imageView)
+        
+        return view
+    }()
+    
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 10
-        imageView.clipsToBounds = true
-        imageView.backgroundColor = .lightGray
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(systemName: "camera.shutter.button.fill")?.withTintColor(.primary, renderingMode: .alwaysOriginal)
         imageView.isUserInteractionEnabled = true
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapImageView))
-        imageView.addGestureRecognizer(tapGesture)
+        
         return imageView
     }()
     
     private let weightLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 18)
-        label.text = "Weight: -"
+        label.font = .preferredFont(forTextStyle: .title3)
+        label.text = LocalizedString.weightLabel
         return label
     }()
     
@@ -64,7 +76,7 @@ class DayRecordView: UIView {
     
     private func setupView() {
         addSubview(dateLabel)
-        addSubview(imageView)
+        addSubview(imageContainerView)
         addSubview(weightLabel)
     }
     
@@ -72,17 +84,26 @@ class DayRecordView: UIView {
         dateLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(50)
             make.leading.trailing.equalToSuperview().inset(20)
-        }
-        
-        imageView.snp.makeConstraints { make in
-            make.top.equalTo(dateLabel.snp.bottom).offset(20)
-            make.leading.trailing.equalToSuperview().inset(20)
-            make.height.equalTo(imageView.snp.width)
+            make.height.equalTo(44)
         }
         
         weightLabel.snp.makeConstraints { make in
-            make.top.equalTo(imageView.snp.bottom).offset(20)
+            make.top.equalTo(dateLabel.snp.bottom).offset(20)
             make.leading.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(32)
+        }
+                
+        imageContainerView.snp.makeConstraints { make in
+            make.top.equalTo(weightLabel.snp.bottom).offset(20)
+            make.bottom.equalTo(safeAreaLayoutGuide).inset(50).priority(250)
+            make.leading.trailing.equalToSuperview().inset(24).priority(250)
+            make.height.equalTo(imageContainerView.snp.width).priority(250)
+            make.centerX.equalToSuperview()
+        }
+        
+        imageView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.height.equalToSuperview().multipliedBy(0.45)
         }
     }
     
@@ -100,5 +121,3 @@ class DayRecordView: UIView {
         imageView.image = image
     }
 }
-
-

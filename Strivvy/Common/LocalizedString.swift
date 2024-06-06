@@ -17,4 +17,6 @@ struct LocalizedString {
         String(localized: "Friday"),
         String(localized: "Saturday"),        
     ]
+    
+    static let weightLabel = String(localized: "WeightLabel")
 }

@@ -52,11 +52,8 @@ class CalendarViewController: UIViewController {
         
         navController.modalPresentationStyle = .pageSheet
         if let sheet = navController.sheetPresentationController {
-            sheet.largestUndimmedDetentIdentifier = nil
             sheet.prefersGrabberVisible = true
-            sheet.prefersScrollingExpandsWhenScrolledToEdge = true
-            sheet.prefersEdgeAttachedInCompactHeight = true
-            sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+            sheet.detents = [.medium(), .large()]            
         }
         
         present(navController, animated: true, completion: nil)

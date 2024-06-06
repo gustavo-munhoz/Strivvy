@@ -49,3 +49,4 @@ class DayRecordViewController: UIViewController, UIImagePickerControllerDelegate
         }
     }
 }
+

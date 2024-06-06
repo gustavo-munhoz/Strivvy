@@ -77,6 +77,17 @@
           }
         }
       }
+    },
+    "WeightLabel" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weight: "
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

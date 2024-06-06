@@ -40,9 +40,13 @@ class CalendarViewController: UIViewController {
     private func presentDayRecordView(for date: Date) {
         logger.debug("Presenting sheet for date: \(date)")
         
-        let viewController = DayRecordViewController(date: date)    
+        let viewController = DayRecordViewController(viewModel: DayRecordViewModel(date: date))
         
-        viewController.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .close, target: self, action: #selector(closeSheet))
+        viewController.navigationItem.rightBarButtonItem = .init(
+            barButtonSystemItem: .close,
+            target: self,
+            action: #selector(closeSheet)
+        )
         
         let navController = UINavigationController(rootViewController: viewController)
         

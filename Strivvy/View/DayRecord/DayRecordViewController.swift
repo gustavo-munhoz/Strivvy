@@ -8,14 +8,14 @@
 import Foundation
 import UIKit
 
-class DayRecordViewController: UIViewController {
+class DayRecordViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    let date: Date
+    let viewModel: DayRecordViewModel
     
-    private lazy var dayRecordView = DayRecordView(date: date)
+    private lazy var dayRecordView = DayRecordView(date: viewModel.date)
     
-    init(date: Date) {
-        self.date = date
+    init(viewModel: DayRecordViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -29,8 +29,23 @@ class DayRecordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dayRecordView.onImageTap = { [weak self] in
+            self?.presentImagePicker()
+        }
+    }
+    
+    private func presentImagePicker() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
         
-        
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        if let selectedImage = info[.originalImage] as? UIImage {
+            viewModel.updatePhoto(selectedImage)
+            dayRecordView.updateImage(selectedImage)
+        }
     }
 }
-

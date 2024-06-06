@@ -28,12 +28,15 @@ class DayRecordView: UIView {
         return label
     }()
     
-    private let imageView: UIImageView = {
+    private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 10
         imageView.clipsToBounds = true
         imageView.backgroundColor = .lightGray
+        imageView.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapImageView))
+        imageView.addGestureRecognizer(tapGesture)
         return imageView
     }()
     
@@ -44,6 +47,8 @@ class DayRecordView: UIView {
         label.text = "Weight: -"
         return label
     }()
+    
+    var onImageTap: (() -> Void)?
     
     init(date: Date) {
         super.init(frame: .zero)
@@ -85,6 +90,14 @@ class DayRecordView: UIView {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM dd, yyyy"
         dateLabel.text = dateFormatter.string(from: date)
+    }
+    
+    @objc private func didTapImageView() {
+        onImageTap?()
+    }
+    
+    func updateImage(_ image: UIImage) {
+        imageView.image = image
     }
 }
 

@@ -17,6 +17,7 @@ class DayRecordViewController: UIViewController, UIImagePickerControllerDelegate
     init(viewModel: DayRecordViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        self.dayRecordView.viewModel = viewModel
     }
     
     required init?(coder: NSCoder) {
@@ -45,7 +46,6 @@ class DayRecordViewController: UIViewController, UIImagePickerControllerDelegate
         picker.dismiss(animated: true, completion: nil)
         if let selectedImage = info[.originalImage] as? UIImage {
             viewModel.updatePhoto(selectedImage)
-            dayRecordView.updateImage(selectedImage)
         }
     }
 }

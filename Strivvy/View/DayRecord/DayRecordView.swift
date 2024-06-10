@@ -8,8 +8,20 @@
 import Foundation
 import UIKit
 import SnapKit
+import Combine
+import os
 
 class DayRecordView: UIView {
+    
+    private let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "DayRecordView")
+    
+    private var cancellables = Set<AnyCancellable>()
+    
+    weak var viewModel: DayRecordViewModel? {
+        didSet {
+            setupSubscriptions()
+        }
+    }
     
     private let dateLabel: UILabel = {
         let label = UILabel()
@@ -74,6 +86,20 @@ class DayRecordView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private func setupSubscriptions() {
+        logger.debug("Setting up DayRecordViewModel subscriptions.")
+        
+        viewModel?.imagePublisher
+            .receive(on: DispatchQueue.main)
+            .sink{ [weak self] image in
+                self?.updateImage(
+                    image
+                    ?? UIImage(systemName: "camera.shutter.button.fill")!
+                        .withTintColor(.primary, renderingMode: .alwaysOriginal))
+            }
+            .store(in: &cancellables)
+    }
+    
     private func setupView() {
         addSubview(dateLabel)
         addSubview(imageContainerView)
@@ -96,8 +122,9 @@ class DayRecordView: UIView {
         imageContainerView.snp.makeConstraints { make in
             make.top.equalTo(weightLabel.snp.bottom).offset(20)
             make.bottom.equalTo(safeAreaLayoutGuide).inset(40)
-            make.width.equalTo(imageContainerView.snp.height)
             make.centerX.equalToSuperview()
+            make.width.equalTo(imageContainerView.snp.height).priority(.high)
+            make.width.lessThanOrEqualToSuperview().inset(12).priority(.required)
         }
         
         imageView.snp.makeConstraints { make in
@@ -107,16 +134,16 @@ class DayRecordView: UIView {
     }
     
     func adjustSizeForIdentifier(_ identifier: UISheetPresentationController.Detent.Identifier) {
-        UIView.animate(withDuration: 0.3) {
-            self.imageContainerView.snp.removeConstraints()
-            
-            switch identifier {
-                case .medium:
-                    
+        imageContainerView.snp.removeConstraints()
+        
+        switch identifier {
+            case .medium:
+                UIView.animate(withDuration: 0.3) {
                     self.imageContainerView.snp.makeConstraints { make in
                         make.top.equalTo(self.weightLabel.snp.bottom).offset(20)
                         make.bottom.equalTo(self.safeAreaLayoutGuide).inset(40)
-                        make.width.equalTo(self.imageContainerView.snp.height)
+                        make.width.equalTo(self.imageContainerView.snp.height).priority(.high)
+                        make.width.lessThanOrEqualToSuperview().inset(12).priority(.required)
                         make.centerX.equalToSuperview()
                     }
                     
@@ -124,9 +151,10 @@ class DayRecordView: UIView {
                         make.center.equalToSuperview()
                         make.width.height.equalToSuperview()
                     }
-                    
-                    
-                case .large:
+                }
+                
+            case .large:
+                UIView.animate(withDuration: 0.3) {
                     self.imageContainerView.snp.makeConstraints { make in
                         make.top.equalTo(self.weightLabel.snp.bottom).offset(20)
                         make.leading.trailing.equalToSuperview().inset(24)
@@ -137,11 +165,10 @@ class DayRecordView: UIView {
                         make.center.equalToSuperview()
                         make.width.height.equalToSuperview()
                     }
-                    
-                    
-                default:
-                    break
-            }
+                }
+                
+            default:
+                break
         }
     }
     
@@ -155,7 +182,7 @@ class DayRecordView: UIView {
         onImageTap?()
     }
     
-    func updateImage(_ image: UIImage) {
+    private func updateImage(_ image: UIImage) {
         imageView.image = image
     }
 }

@@ -124,7 +124,7 @@ class DayRecordView: UIView {
             make.bottom.equalTo(safeAreaLayoutGuide).inset(40)
             make.centerX.equalToSuperview()
             make.width.equalTo(imageContainerView.snp.height).priority(.high)
-            make.width.lessThanOrEqualToSuperview().inset(12).priority(.required)
+            make.width.lessThanOrEqualToSuperview().inset(24).priority(.required)
         }
         
         imageView.snp.makeConstraints { make in
@@ -143,7 +143,7 @@ class DayRecordView: UIView {
                         make.top.equalTo(self.weightLabel.snp.bottom).offset(20)
                         make.bottom.equalTo(self.safeAreaLayoutGuide).inset(40)
                         make.width.equalTo(self.imageContainerView.snp.height).priority(.high)
-                        make.width.lessThanOrEqualToSuperview().inset(12).priority(.required)
+                        make.width.lessThanOrEqualToSuperview().inset(24).priority(.required)
                         make.centerX.equalToSuperview()
                     }
                     

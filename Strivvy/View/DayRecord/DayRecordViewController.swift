@@ -18,6 +18,8 @@ class DayRecordViewController: UIViewController, UIImagePickerControllerDelegate
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         self.dayRecordView.viewModel = viewModel
+        self.viewModel.setup()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -30,6 +32,7 @@ class DayRecordViewController: UIViewController, UIImagePickerControllerDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         dayRecordView.onImageTap = { [weak self] in
             self?.presentImagePicker()
         }

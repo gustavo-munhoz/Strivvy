@@ -92,18 +92,56 @@ class DayRecordView: UIView {
             make.leading.trailing.equalToSuperview().inset(20)
             make.height.equalTo(32)
         }
-                
+        
         imageContainerView.snp.makeConstraints { make in
             make.top.equalTo(weightLabel.snp.bottom).offset(20)
-            make.bottom.equalTo(safeAreaLayoutGuide).inset(50).priority(250)
-            make.leading.trailing.equalToSuperview().inset(24).priority(250)
-            make.height.equalTo(imageContainerView.snp.width).priority(250)
+            make.bottom.equalTo(safeAreaLayoutGuide).inset(40)
+            make.width.equalTo(imageContainerView.snp.height)
             make.centerX.equalToSuperview()
         }
         
         imageView.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            make.width.height.equalToSuperview().multipliedBy(0.45)
+            make.width.height.equalToSuperview()
+        }
+    }
+    
+    func adjustSizeForIdentifier(_ identifier: UISheetPresentationController.Detent.Identifier) {
+        UIView.animate(withDuration: 0.3) {
+            self.imageContainerView.snp.removeConstraints()
+            
+            switch identifier {
+                case .medium:
+                    
+                    self.imageContainerView.snp.makeConstraints { make in
+                        make.top.equalTo(self.weightLabel.snp.bottom).offset(20)
+                        make.bottom.equalTo(self.safeAreaLayoutGuide).inset(40)
+                        make.width.equalTo(self.imageContainerView.snp.height)
+                        make.centerX.equalToSuperview()
+                    }
+                    
+                    self.imageView.snp.remakeConstraints { make in
+                        make.center.equalToSuperview()
+                        make.width.height.equalToSuperview()
+                    }
+                    
+                    
+                case .large:
+                    self.imageContainerView.snp.makeConstraints { make in
+                        make.top.equalTo(self.weightLabel.snp.bottom).offset(20)
+                        make.leading.trailing.equalToSuperview().inset(24)
+                        make.height.equalTo(self.imageContainerView.snp.width)
+                    }
+                    
+                    self.imageView.snp.remakeConstraints { make in
+                        make.center.equalToSuperview()
+                        make.width.height.equalToSuperview()
+                    }
+                    
+                    
+                default:
+                    break
+            }
         }
     }
     

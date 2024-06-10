@@ -53,10 +53,11 @@ class CalendarViewController: UIViewController {
         navController.modalPresentationStyle = .pageSheet
         if let sheet = navController.sheetPresentationController {
             sheet.prefersGrabberVisible = true
-            sheet.detents = [.medium(), .large()]            
+            sheet.detents = [.medium(), .large()]
+            sheet.delegate = self
         }
         
-        present(navController, animated: true, completion: nil)
+        self.present(navController, animated: true, completion: nil)
     }
     
     @objc func closeSheet() {
@@ -121,6 +122,17 @@ extension CalendarViewController: JTACMonthViewDelegate {
             cell.contentView.alpha = 1.0
         } else {
             cell.contentView.alpha = 0.5
+        }
+    }
+}
+
+extension CalendarViewController: UISheetPresentationControllerDelegate {
+    func sheetPresentationControllerDidChangeSelectedDetentIdentifier(_ sheetPresentationController: UISheetPresentationController) {
+        if let selectedDetentIdentifier = sheetPresentationController.selectedDetentIdentifier,
+           let navigationController = sheetPresentationController.presentedViewController as? UINavigationController {            
+            if let view = navigationController.topViewController?.view as? DayRecordView {
+                view.adjustSizeForIdentifier(selectedDetentIdentifier)
+            }
         }
     }
 }

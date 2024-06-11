@@ -19,7 +19,6 @@ class DayRecordViewController: UIViewController, UIImagePickerControllerDelegate
         super.init(nibName: nil, bundle: nil)
         self.dayRecordView.viewModel = viewModel
         self.viewModel.setup()
-        
     }
     
     required init?(coder: NSCoder) {

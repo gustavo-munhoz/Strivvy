@@ -55,6 +55,14 @@ class DayRecordView: UIView {
         return view
     }()
     
+    private let weightLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = .preferredFont(forTextStyle: .title3)
+        label.text = LocalizedString.weightLabel
+        return label
+    }()
+    
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -64,15 +72,53 @@ class DayRecordView: UIView {
         return imageView
     }()
     
-    private let weightLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.font = .preferredFont(forTextStyle: .title3)
-        label.text = LocalizedString.weightLabel
-        return label
+    private(set) lazy var addPhotoButton: UIButton = {
+        var config = UIButton.Configuration.filled()
+        config.baseBackgroundColor = .systemGray
+        config.baseForegroundColor = .primary
+        
+        let button = UIButton(configuration: config)
+        button.setTitle("Add Photo", for: .normal)
+        button.addTarget(self, action: #selector(didTapAddPhoto), for: .touchUpInside)
+        button.isHidden = true
+        
+        return button
+    }()
+
+    private lazy var addWeightButton: UIButton = {
+        var config = UIButton.Configuration.filled()
+        config.baseBackgroundColor = .systemGray
+        config.baseForegroundColor = .primary
+        
+        let button = UIButton(configuration: config)
+        button.setTitle("Add Weight", for: .normal)
+    
+        button.addTarget(self, action: #selector(didTapAddWeight), for: .touchUpInside)
+        button.isHidden = true
+        return button
+    }()
+    
+    private(set) lazy var buttonsStackView: UIStackView = {
+        let view = UIStackView(
+            arrangedSubviews: [
+                UIView.spacer(for: .vertical),
+                addPhotoButton,
+                addWeightButton
+            ]
+        )
+        
+        view.axis = .vertical
+        view.distribution = .fill
+        view.spacing = 20
+        
+//        view.isHidden = true
+        
+        return view
     }()
     
     var onImageTap: (() -> Void)?
+    var onAddPhotoTap: (() -> Void)?
+    var onAddWeightTap: (() -> Void)?
     
     init(date: Date) {
         super.init(frame: .zero)
@@ -104,6 +150,7 @@ class DayRecordView: UIView {
         addSubview(dateLabel)
         addSubview(imageContainerView)
         addSubview(weightLabel)
+        addSubview(buttonsStackView)
     }
     
     private func setupConstraints() {
@@ -131,6 +178,12 @@ class DayRecordView: UIView {
             make.center.equalToSuperview()
             make.width.height.equalToSuperview()
         }
+        
+        buttonsStackView.snp.makeConstraints { make in
+            make.top.equalTo(imageContainerView.snp.bottom)
+            make.bottom.equalTo(safeAreaLayoutGuide)
+            make.trailing.leading.equalToSuperview().inset(24)
+        }
     }
     
     func adjustSizeForIdentifier(_ identifier: UISheetPresentationController.Detent.Identifier) {
@@ -139,6 +192,8 @@ class DayRecordView: UIView {
         switch identifier {
             case .medium:
                 UIView.animate(withDuration: 0.3) {
+//                    self.buttonsStackView.isHidden = true
+                
                     self.imageContainerView.snp.makeConstraints { make in
                         make.top.equalTo(self.weightLabel.snp.bottom).offset(20)
                         make.bottom.equalTo(self.safeAreaLayoutGuide).inset(40)
@@ -155,6 +210,8 @@ class DayRecordView: UIView {
                 
             case .large:
                 UIView.animate(withDuration: 0.3) {
+//                    self.buttonsStackView.isHidden = false
+                    
                     self.imageContainerView.snp.makeConstraints { make in
                         make.top.equalTo(self.weightLabel.snp.bottom).offset(20)
                         make.leading.trailing.equalToSuperview().inset(24)
@@ -182,6 +239,16 @@ class DayRecordView: UIView {
         onImageTap?()
     }
     
+    @objc private func didTapAddPhoto() {
+        onAddPhotoTap?()
+    }
+    
+    
+    @objc private func didTapAddWeight() {
+        onAddWeightTap?()
+    }
+        
+
     private func updateImage(_ image: UIImage) {
         imageView.image = image
     }

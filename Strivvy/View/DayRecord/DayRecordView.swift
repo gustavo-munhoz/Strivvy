@@ -80,7 +80,6 @@ class DayRecordView: UIView {
         let button = UIButton(configuration: config)
         button.setTitle("Add Photo", for: .normal)
         button.addTarget(self, action: #selector(didTapAddPhoto), for: .touchUpInside)
-        button.isHidden = true
         
         return button
     }()
@@ -92,9 +91,8 @@ class DayRecordView: UIView {
         
         let button = UIButton(configuration: config)
         button.setTitle("Add Weight", for: .normal)
-    
         button.addTarget(self, action: #selector(didTapAddWeight), for: .touchUpInside)
-        button.isHidden = true
+
         return button
     }()
     
@@ -109,9 +107,10 @@ class DayRecordView: UIView {
         
         view.axis = .vertical
         view.distribution = .fill
+        view.alignment = .fill
         view.spacing = 20
         
-//        view.isHidden = true
+        view.isHidden = true
         
         return view
     }()
@@ -181,8 +180,8 @@ class DayRecordView: UIView {
         
         buttonsStackView.snp.makeConstraints { make in
             make.top.equalTo(imageContainerView.snp.bottom)
-            make.bottom.equalTo(safeAreaLayoutGuide)
-            make.trailing.leading.equalToSuperview().inset(24)
+            make.bottom.centerX.equalTo(safeAreaLayoutGuide)
+            make.width.equalToSuperview().inset(24)
         }
     }
     
@@ -192,7 +191,7 @@ class DayRecordView: UIView {
         switch identifier {
             case .medium:
                 UIView.animate(withDuration: 0.3) {
-//                    self.buttonsStackView.isHidden = true
+                    self.buttonsStackView.isHidden = true
                 
                     self.imageContainerView.snp.makeConstraints { make in
                         make.top.equalTo(self.weightLabel.snp.bottom).offset(20)
@@ -210,7 +209,7 @@ class DayRecordView: UIView {
                 
             case .large:
                 UIView.animate(withDuration: 0.3) {
-//                    self.buttonsStackView.isHidden = false
+                    self.buttonsStackView.isHidden = false
                     
                     self.imageContainerView.snp.makeConstraints { make in
                         make.top.equalTo(self.weightLabel.snp.bottom).offset(20)
@@ -222,6 +221,8 @@ class DayRecordView: UIView {
                         make.center.equalToSuperview()
                         make.width.height.equalToSuperview()
                     }
+                    
+                    self.layoutIfNeeded()
                 }
                 
             default:

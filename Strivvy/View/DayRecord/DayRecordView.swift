@@ -110,7 +110,8 @@ class DayRecordView: UIView {
         view.alignment = .fill
         view.spacing = 20
         
-        view.isHidden = true
+//        view.isHidden = true
+        view.alpha = 0
         
         return view
     }()
@@ -179,8 +180,10 @@ class DayRecordView: UIView {
         }
         
         buttonsStackView.snp.makeConstraints { make in
-            make.top.equalTo(imageContainerView.snp.bottom)
-            make.bottom.centerX.equalTo(safeAreaLayoutGuide)
+            make.top.equalTo(imageContainerView.snp.bottom).priority(.required)
+            make.centerX.equalTo(safeAreaLayoutGuide).priority(.required)
+            make.height.greaterThanOrEqualTo(120).priority(.required)
+            make.bottom.equalTo(safeAreaLayoutGuide).priority(.high)
             make.width.equalToSuperview().inset(24)
         }
     }
@@ -190,9 +193,13 @@ class DayRecordView: UIView {
         
         switch identifier {
             case .medium:
-                UIView.animate(withDuration: 0.3) {
-                    self.buttonsStackView.isHidden = true
                 
+                UIView.animate(withDuration: 0.1) {
+                    self.buttonsStackView.alpha = 0
+                }
+                
+                UIView.animate(withDuration: 0.3) {
+                    
                     self.imageContainerView.snp.makeConstraints { make in
                         make.top.equalTo(self.weightLabel.snp.bottom).offset(20)
                         make.bottom.equalTo(self.safeAreaLayoutGuide).inset(40)
@@ -209,7 +216,6 @@ class DayRecordView: UIView {
                 
             case .large:
                 UIView.animate(withDuration: 0.3) {
-                    self.buttonsStackView.isHidden = false
                     
                     self.imageContainerView.snp.makeConstraints { make in
                         make.top.equalTo(self.weightLabel.snp.bottom).offset(20)
@@ -221,8 +227,14 @@ class DayRecordView: UIView {
                         make.center.equalToSuperview()
                         make.width.height.equalToSuperview()
                     }
-                    
+                 
                     self.layoutIfNeeded()
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                    UIView.animate(withDuration: 0.1) {
+                        self.buttonsStackView.alpha = 1
+                    }
                 }
                 
             default:

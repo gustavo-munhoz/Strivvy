@@ -23,6 +23,8 @@ class DayRecordView: UIView {
         }
     }
     
+    private var isEditingWeight = false
+    
     private let dateLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -47,7 +49,7 @@ class DayRecordView: UIView {
         view.clipsToBounds = true
         
         // TODO: Implementar opção de tirar foto ou escolher da biblioteca
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapImageView))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapImageViewOrAddPhoto))
         view.addGestureRecognizer(tapGesture)
         
         view.addSubview(imageView)
@@ -55,12 +57,16 @@ class DayRecordView: UIView {
         return view
     }()
     
-    private let weightLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.font = .preferredFont(forTextStyle: .title3)
-        label.text = LocalizedString.weightLabel
-        return label
+    private lazy var weightTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Enter weight"
+        textField.font = .preferredFont(forTextStyle: .title3)
+        textField.textAlignment = .center
+        textField.keyboardType = .default
+        textField.returnKeyType = .done
+        textField.delegate = self
+        
+        return textField
     }()
     
     private lazy var imageView: UIImageView = {
@@ -79,7 +85,11 @@ class DayRecordView: UIView {
         
         let button = UIButton(configuration: config)
         button.setTitle("Add Photo", for: .normal)
-        button.addTarget(self, action: #selector(didTapAddPhoto), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapImageViewOrAddPhoto), for: .touchUpInside)
+        
+        button.snp.makeConstraints { make in
+            make.height.equalTo(44)
+        }
         
         return button
     }()
@@ -93,6 +103,10 @@ class DayRecordView: UIView {
         button.setTitle("Add Weight", for: .normal)
         button.addTarget(self, action: #selector(didTapAddWeight), for: .touchUpInside)
 
+        button.snp.makeConstraints { make in
+            make.height.equalTo(44)
+        }
+        
         return button
     }()
     
@@ -110,13 +124,11 @@ class DayRecordView: UIView {
         view.alignment = .fill
         view.spacing = 20
         
-//        view.isHidden = true
         view.alpha = 0
         
         return view
     }()
     
-    var onImageTap: (() -> Void)?
     var onAddPhotoTap: (() -> Void)?
     var onAddWeightTap: (() -> Void)?
     
@@ -149,8 +161,12 @@ class DayRecordView: UIView {
     private func setupView() {
         addSubview(dateLabel)
         addSubview(imageContainerView)
-        addSubview(weightLabel)
+        addSubview(weightTextField)
         addSubview(buttonsStackView)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+            tapGesture.cancelsTouchesInView = false
+            addGestureRecognizer(tapGesture)
     }
     
     private func setupConstraints() {
@@ -160,14 +176,14 @@ class DayRecordView: UIView {
             make.height.equalTo(44)
         }
         
-        weightLabel.snp.makeConstraints { make in
+        weightTextField.snp.makeConstraints { make in
             make.top.equalTo(dateLabel.snp.bottom).offset(20)
             make.leading.trailing.equalToSuperview().inset(20)
             make.height.equalTo(32)
         }
         
         imageContainerView.snp.makeConstraints { make in
-            make.top.equalTo(weightLabel.snp.bottom).offset(20)
+            make.top.equalTo(weightTextField.snp.bottom).offset(20)
             make.bottom.equalTo(safeAreaLayoutGuide).inset(40)
             make.centerX.equalToSuperview()
             make.width.equalTo(imageContainerView.snp.height).priority(.high)
@@ -193,7 +209,6 @@ class DayRecordView: UIView {
         
         switch identifier {
             case .medium:
-                
                 UIView.animate(withDuration: 0.1) {
                     self.buttonsStackView.alpha = 0
                 }
@@ -201,7 +216,7 @@ class DayRecordView: UIView {
                 UIView.animate(withDuration: 0.3) {
                     
                     self.imageContainerView.snp.makeConstraints { make in
-                        make.top.equalTo(self.weightLabel.snp.bottom).offset(20)
+                        make.top.equalTo(self.weightTextField.snp.bottom).offset(20)
                         make.bottom.equalTo(self.safeAreaLayoutGuide).inset(40)
                         make.width.equalTo(self.imageContainerView.snp.height).priority(.high)
                         make.width.lessThanOrEqualToSuperview().inset(24).priority(.required)
@@ -218,7 +233,7 @@ class DayRecordView: UIView {
                 UIView.animate(withDuration: 0.3) {
                     
                     self.imageContainerView.snp.makeConstraints { make in
-                        make.top.equalTo(self.weightLabel.snp.bottom).offset(20)
+                        make.top.equalTo(self.weightTextField.snp.bottom).offset(20)
                         make.leading.trailing.equalToSuperview().inset(24)
                         make.height.equalTo(self.imageContainerView.snp.width)
                     }
@@ -231,8 +246,8 @@ class DayRecordView: UIView {
                     self.layoutIfNeeded()
                 }
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-                    UIView.animate(withDuration: 0.1) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                    UIView.animate(withDuration: 0.05) {
                         self.buttonsStackView.alpha = 1
                     }
                 }
@@ -248,21 +263,39 @@ class DayRecordView: UIView {
         dateLabel.text = dateFormatter.string(from: date)
     }
     
-    @objc private func didTapImageView() {
-        onImageTap?()
-    }
-    
-    @objc private func didTapAddPhoto() {
+    @objc private func didTapImageViewOrAddPhoto() {
+        guard !isEditingWeight else {
+            dismissKeyboard()
+            return
+        }
+        
         onAddPhotoTap?()
     }
     
+    @objc private func dismissKeyboard() {
+        endEditing(true)
+    }
     
     @objc private func didTapAddWeight() {
-        onAddWeightTap?()
+        weightTextField.becomeFirstResponder()
     }
-        
 
     private func updateImage(_ image: UIImage) {
         imageView.image = image
+    }
+}
+
+extension DayRecordView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        isEditingWeight = true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        isEditingWeight = false
     }
 }

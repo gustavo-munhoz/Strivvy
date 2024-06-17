@@ -32,7 +32,7 @@ class DayRecordViewController: UIViewController, UIImagePickerControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dayRecordView.onImageTap = { [weak self] in
+        dayRecordView.onAddPhotoTap = { [weak self] in
             self?.presentImagePicker()
         }
     }

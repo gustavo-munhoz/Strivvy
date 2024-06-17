@@ -33,6 +33,9 @@ class CalendarView: UIView {
         setupConstraints()
         setupWeekDays()
         setupCalendar()
+        
+        self.backgroundColor = .systemBackground
+        
     }
     
     required init?(coder: NSCoder) {

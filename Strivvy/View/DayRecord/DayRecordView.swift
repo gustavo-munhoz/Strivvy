@@ -148,12 +148,19 @@ class DayRecordView: UIView {
         logger.debug("Setting up DayRecordViewModel subscriptions.")
         
         viewModel?.imagePublisher
-            .receive(on: DispatchQueue.main)
+            .receive(on: RunLoop.main)
             .sink{ [weak self] image in
                 self?.updateImage(
                     image
                     ?? UIImage(systemName: "camera.shutter.button.fill")!
                         .withTintColor(.primary, renderingMode: .alwaysOriginal))
+            }
+            .store(in: &cancellables)
+        
+        viewModel?.weightPublisher
+            .receive(on: RunLoop.main)
+            .sink { [weak self] weight in
+                self?.updateWeight(weight)
             }
             .store(in: &cancellables)
     }
@@ -283,6 +290,10 @@ class DayRecordView: UIView {
     private func updateImage(_ image: UIImage) {
         imageView.image = image
     }
+    
+    private func updateWeight(_ weight: String?) {
+        weightTextField.text = weight
+    }
 }
 
 extension DayRecordView: UITextFieldDelegate {
@@ -297,5 +308,9 @@ extension DayRecordView: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         isEditingWeight = false
+        
+        if let text = textField.text {
+            viewModel?.updateWeight(text)
+        }
     }
 }

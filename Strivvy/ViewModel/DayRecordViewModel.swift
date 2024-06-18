@@ -16,8 +16,10 @@ class DayRecordViewModel {
     
     let date: Date
     private(set) var photo: UIImage?
+    private(set) var weight: String?
     
     let imagePublisher = PassthroughSubject<UIImage?, Never>()
+    let weightPublisher = PassthroughSubject<String?, Never>()
     
     init(date: Date) {
         self.date = date
@@ -25,6 +27,7 @@ class DayRecordViewModel {
     
     func setup() {
         loadPhoto()
+        loadWeight()
     }
     
     func updatePhoto(_ newPhoto: UIImage) {
@@ -62,6 +65,37 @@ class DayRecordViewModel {
             self.photo = image
             imagePublisher.send(photo)
         }
+    }
+    
+    private func saveWeight(_ weight: String) {
+        let path = weightFilePath()
+        logger.debug("Saving weight to path: \(path)")
+        do {
+            try weight.write(to: path, atomically: true, encoding: .utf8)
+        } catch {
+            logger.error("Failed to save weight: \(error.localizedDescription)")
+        }
+    }
+
+    private func loadWeight() {
+        let fileURL = weightFilePath()
+        logger.debug("Fetching weight for view from path: \(fileURL)")
+        if let weightString = try? String(contentsOf: fileURL) {
+            self.weight = weightString
+            weightPublisher.send(weightString)
+        }
+    }
+
+    private func weightFilePath() -> URL {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd"
+        let fileName = "\(dateFormatter.string(from: date))-weight.txt"
+        return documentDirectoryPath().appendingPathComponent(fileName)
+    }
+
+    func updateWeight(_ newWeight: String) {
+        weight = newWeight
+        saveWeight(newWeight)
     }
 }
 

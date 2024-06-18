@@ -84,7 +84,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Weight: "
+            "value" : "Enter weight"
           }
         }
       }

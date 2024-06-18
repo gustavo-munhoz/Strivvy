@@ -98,7 +98,7 @@ extension CalendarViewController: JTACMonthViewDelegate {
         ) as! CalendarCell
         
         cell.configure(with: cellState.text)
-        handleCellAppearance(cell: cell, cellState: cellState)
+        handleCellAppearance(cell: cell, cellState: cellState, date: date)
         
         return cell
     }        
@@ -117,11 +117,18 @@ extension CalendarViewController: JTACMonthViewDelegate {
         return MonthSize(defaultSize: 75)
     }
     
-    private func handleCellAppearance(cell: CalendarCell, cellState: CellState) {
-        if cellState.dateBelongsTo == .thisMonth {
-            cell.contentView.alpha = 1.0
+    private func handleCellAppearance(cell: CalendarCell, cellState: CellState, date: Date) {
+        cell.backgroundColor = .clear
+        cell.contentView.alpha = cellState.dateBelongsTo == .thisMonth ? 1 : 0.5
+    
+        if hasRecord(for: date) {
+            // height and width are not equal. Would be nice to have 1:1, with vertical spacing instead of tall cels
+            cell.backgroundColor = .systemBlue
+            cell.layer.cornerRadius = min(cell.frame.size.width, cell.frame.size.height) / 2
+            cell.clipsToBounds = true
+            cell.layer.masksToBounds = true
         } else {
-            cell.contentView.alpha = 0.5
+            cell.layer.cornerRadius = 0
         }
     }
 }
@@ -134,5 +141,20 @@ extension CalendarViewController: UISheetPresentationControllerDelegate {
                 view.adjustSizeForIdentifier(selectedDetentIdentifier)
             }
         }
+    }
+}
+
+extension CalendarViewController {
+    func hasRecord(for date: Date) -> Bool {
+        let fileManager = FileManager.default
+        let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd"
+        let dateString = dateFormatter.string(from: date)
+
+        let photoPath = documentsDirectory.appendingPathComponent("\(dateString)-photo.jpg").path
+        let weightPath = documentsDirectory.appendingPathComponent("\(dateString)-weight.txt").path
+                
+        return fileManager.fileExists(atPath: photoPath) || fileManager.fileExists(atPath: weightPath)
     }
 }

@@ -59,7 +59,7 @@ class DayRecordView: UIView {
     
     private lazy var weightTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Enter weight"
+        textField.placeholder = LocalizedString.weightLabel
         textField.font = .preferredFont(forTextStyle: .title3)
         textField.textAlignment = .center
         textField.keyboardType = .default

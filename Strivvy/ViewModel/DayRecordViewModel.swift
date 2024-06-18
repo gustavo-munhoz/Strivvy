@@ -15,8 +15,9 @@ class DayRecordViewModel {
     private let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "DayRecordViewModel")
     
     let date: Date
-    private(set) var photo: UIImage?
-    private(set) var weight: String?
+        
+    private var photo: UIImage?
+    private var weight: String?
     
     let imagePublisher = PassthroughSubject<UIImage?, Never>()
     let weightPublisher = PassthroughSubject<String?, Never>()
@@ -44,7 +45,7 @@ class DayRecordViewModel {
     private func filePath() -> URL {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyyMMdd"
-        let fileName = "\(dateFormatter.string(from: date)).jpg"
+        let fileName = "\(dateFormatter.string(from: date))-photo.jpg"
         return documentDirectoryPath().appendingPathComponent(fileName)
     }
     

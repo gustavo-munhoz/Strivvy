@@ -22,6 +22,8 @@ class DayRecordViewModel {
     let imagePublisher = PassthroughSubject<UIImage?, Never>()
     let weightPublisher = PassthroughSubject<String?, Never>()
     
+    let changePublisher = PassthroughSubject<Void, Never>()
+    
     init(date: Date) {
         self.date = date
     }
@@ -35,6 +37,7 @@ class DayRecordViewModel {
         photo = newPhoto
         savePhoto(newPhoto)
         imagePublisher.send(photo)
+        changePublisher.send()
     }
     
     private func documentDirectoryPath() -> URL {
@@ -97,6 +100,7 @@ class DayRecordViewModel {
     func updateWeight(_ newWeight: String) {
         weight = newWeight
         saveWeight(newWeight)
+        changePublisher.send()
     }
 }
 

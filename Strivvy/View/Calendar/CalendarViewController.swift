@@ -7,6 +7,7 @@
 
 import UIKit
 import JTAppleCalendar
+import Combine
 import os
 
 class CalendarViewController: UIViewController {
@@ -18,6 +19,14 @@ class CalendarViewController: UIViewController {
     override func loadView() {
         view = calendarView
     }
+    
+    weak var currentlyEditingCellViewModel: DayRecordViewModel? {
+        didSet {
+            bindDayRecordViewModel(currentlyEditingCellViewModel!)
+        }
+    }
+    
+    private var cancellables = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +49,10 @@ class CalendarViewController: UIViewController {
     private func presentDayRecordView(for date: Date) {
         logger.debug("Presenting sheet for date: \(date)")
         
-        let viewController = DayRecordViewController(viewModel: DayRecordViewModel(date: date))
+        let vm = DayRecordViewModel(date: date)
+        self.currentlyEditingCellViewModel = vm
+        
+        let viewController = DayRecordViewController(viewModel: vm)
         
         viewController.navigationItem.rightBarButtonItem = .init(
             barButtonSystemItem: .close,
@@ -122,11 +134,11 @@ extension CalendarViewController: JTACMonthViewDelegate {
         cell.contentView.alpha = cellState.dateBelongsTo == .thisMonth ? 1 : 0.5
     
         if hasRecord(for: date) {
-            // height and width are not equal. Would be nice to have 1:1, with vertical spacing instead of tall cels
             cell.backgroundColor = .systemTeal
             cell.layer.cornerRadius = min(cell.frame.size.width, cell.frame.size.height) / 2 - 4
             cell.clipsToBounds = true
             cell.layer.masksToBounds = true
+            
         } else {
             cell.layer.cornerRadius = 0
         }
@@ -156,5 +168,22 @@ extension CalendarViewController {
         let weightPath = documentsDirectory.appendingPathComponent("\(dateString)-weight.txt").path
                 
         return fileManager.fileExists(atPath: photoPath) || fileManager.fileExists(atPath: weightPath)
+    }
+}
+
+extension CalendarViewController {
+    
+    func bindDayRecordViewModel(_ viewModel: DayRecordViewModel) {
+        viewModel.changePublisher
+            .receive(on: RunLoop.main)
+            .sink {
+                self.logger.debug("Received change from DayRecordViewModel.")
+                self.calendarView.calendarView.reloadData()
+            }
+            .store(in: &cancellables)
+    }
+    
+    func removeViewModelBinding() {
+        self.currentlyEditingCellViewModel = nil
     }
 }

@@ -68,7 +68,7 @@ class CalendarView: UIView {
         calendarView.showsHorizontalScrollIndicator = false
         calendarView.showsVerticalScrollIndicator = false
         calendarView.allowsSelection = true
-        calendarView.cellSize = 75
+        calendarView.cellSize = ((UIScreen.main.bounds.width - 32) / 7).rounded(.down)
     }
     
     private func setupWeekDays() {

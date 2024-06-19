@@ -96,12 +96,12 @@ extension CalendarViewController: JTACMonthViewDelegate {
             withReuseIdentifier: String(describing: CalendarCell.self),
             for: indexPath
         ) as! CalendarCell
-        
+                
         cell.configure(with: cellState.text)
         handleCellAppearance(cell: cell, cellState: cellState, date: date)
         
         return cell
-    }        
+    }
     
     func calendar(_ calendar: JTACMonthView, headerViewForDateRange range: (start: Date, end: Date), at indexPath: IndexPath) -> JTACMonthReusableView {
         let header = calendar.dequeueReusableJTAppleSupplementaryView(
@@ -123,8 +123,8 @@ extension CalendarViewController: JTACMonthViewDelegate {
     
         if hasRecord(for: date) {
             // height and width are not equal. Would be nice to have 1:1, with vertical spacing instead of tall cels
-            cell.backgroundColor = .systemBlue
-            cell.layer.cornerRadius = min(cell.frame.size.width, cell.frame.size.height) / 2
+            cell.backgroundColor = .systemTeal
+            cell.layer.cornerRadius = min(cell.frame.size.width, cell.frame.size.height) / 2 - 4
             cell.clipsToBounds = true
             cell.layer.masksToBounds = true
         } else {

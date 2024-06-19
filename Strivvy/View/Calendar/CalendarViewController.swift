@@ -133,7 +133,15 @@ extension CalendarViewController: JTACMonthViewDelegate {
         cell.backgroundColor = .clear
         cell.contentView.alpha = cellState.dateBelongsTo == .thisMonth ? 1 : 0.5
     
-        if hasRecord(for: date) {
+        
+        if Calendar.current.isDateInToday(date) {
+            cell.backgroundColor = .systemPurple
+            cell.layer.cornerRadius = min(cell.frame.size.width, cell.frame.size.height) / 2 - 4
+            cell.clipsToBounds = true
+            cell.layer.masksToBounds = true
+        }
+        
+        else if hasRecord(for: date) {
             cell.backgroundColor = .systemTeal
             cell.layer.cornerRadius = min(cell.frame.size.width, cell.frame.size.height) / 2 - 4
             cell.clipsToBounds = true

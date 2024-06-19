@@ -31,7 +31,13 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCalendarView()
+        NotificationCenter.default.addObserver(self, selector: #selector(dayChanged), name: .NSCalendarDayChanged, object: nil)
     }
+
+    @objc func dayChanged() {
+        calendarView.calendarView.reloadData()
+    }
+
     
     private func configureCalendarView() {
         logger.debug("Configuring Calendar View...")

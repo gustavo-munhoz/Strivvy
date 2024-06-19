@@ -19,4 +19,15 @@ struct LocalizedString {
     ]
     
     static let weightLabel = String(localized: "WeightLabel")
+ 
+    static let settingsCameraTitle = String(localized: "OpenSettingsTitleCamera")
+    static let settingsCameraMessage = String(localized: "OpenSettingsMessageCamera")
+    static let settingsAlertTitle = String(localized: "OpenSettingsAlertTitle")
+    
+    static let chooseFromGallery = String(localized: "ChooseFromGallery")
+    static let takePicture = String(localized: "TakePicture")
+    static let chooseAnOption = String(localized: "ChooseAnOption")
+    
+    static let cancel = String(localized: "Cancel")
+    
 }

@@ -1,6 +1,39 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Cancel" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "ChooseAnOption" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose an option"
+          }
+        }
+      }
+    },
+    "ChooseFromGallery" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick From Gallery"
+          }
+        }
+      }
+    },
     "Friday" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -23,6 +56,50 @@
         }
       }
     },
+    "NSCameraUsageDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is required to take pictures and save them inside the app. The camera will only be used when you want to take a picture."
+          }
+        }
+      }
+    },
+    "OpenSettingsAlertTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open Settings"
+          }
+        }
+      }
+    },
+    "OpenSettingsMessageCamera" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This app requires camera access. Please, open Settings and enable camera."
+          }
+        }
+      }
+    },
+    "OpenSettingsTitleCamera" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Camera Access Required"
+          }
+        }
+      }
+    },
     "Saturday" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -41,6 +118,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sun"
+          }
+        }
+      }
+    },
+    "TakePicture" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Take Picture"
           }
         }
       }

@@ -110,7 +110,9 @@ extension CalendarViewController: JTACMonthViewDelegate {
     }
     
     func calendar(_ calendar: JTACMonthView, shouldSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) -> Bool {
-        return date <= Date()
+        if Calendar.current.isDateInToday(date) { return true }
+            
+        return date <= Date() && hasRecord(for: date)
     }
     
     func calendar(_ calendar: JTAppleCalendar.JTACMonthView, cellForItemAt date: Date, cellState: JTAppleCalendar.CellState, indexPath: IndexPath) -> JTAppleCalendar.JTACDayCell {
@@ -142,7 +144,6 @@ extension CalendarViewController: JTACMonthViewDelegate {
     private func handleCellAppearance(cell: CalendarCell, cellState: CellState, date: Date) {
         cell.backgroundColor = .clear
         cell.contentView.alpha = (cellState.dateBelongsTo == .thisMonth && date <= Date()) ? 1 : 0.5
-            
         
         if Calendar.current.isDateInToday(date) {
             cell.backgroundColor = .systemPurple

@@ -15,7 +15,9 @@ class DayRecordViewModel {
     private let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "DayRecordViewModel")
     
     let date: Date
-        
+    
+    private(set) lazy var allowsUserInput = Calendar.current.isDateInToday(date)    
+    
     private var photo: UIImage?
     private var weight: String?
     

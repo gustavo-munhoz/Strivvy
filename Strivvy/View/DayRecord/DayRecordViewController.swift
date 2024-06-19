@@ -63,6 +63,8 @@ class DayRecordViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     private func presentImagePicker() {
+        guard viewModel.allowsUserInput else { return }
+        
         let alertController = UIAlertController(title: nil, message: LocalizedString.chooseAnOption, preferredStyle: .actionSheet)
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -119,6 +121,5 @@ class DayRecordViewController: UIViewController, UIImagePickerControllerDelegate
             }
         }
     }
-
 }
 

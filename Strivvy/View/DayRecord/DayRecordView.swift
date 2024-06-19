@@ -20,6 +20,7 @@ class DayRecordView: UIView {
     weak var viewModel: DayRecordViewModel? {
         didSet {
             setupSubscriptions()
+            setupBasedInputAllowance()
         }
     }
     
@@ -163,6 +164,15 @@ class DayRecordView: UIView {
                 self?.updateWeight(weight)
             }
             .store(in: &cancellables)
+    }
+    
+    private func setupBasedInputAllowance() {
+        guard let viewModel = viewModel else { return }
+        
+        if !viewModel.allowsUserInput {
+            weightTextField.isEnabled = false
+            weightTextField.placeholder = ""
+        }
     }
     
     private func setupView() {

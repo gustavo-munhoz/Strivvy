@@ -21,6 +21,10 @@ class DayRecordViewModel {
     private var photo: UIImage?
     private var weight: String?
     
+    var hasImage: Bool {
+        photo != nil
+    }
+    
     let imagePublisher = PassthroughSubject<UIImage?, Never>()
     let weightPublisher = PassthroughSubject<String?, Never>()
     

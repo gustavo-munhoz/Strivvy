@@ -17,6 +17,10 @@ class DayRecordView: UIView {
     
     private var cancellables = Set<AnyCancellable>()
     
+    private var isToday: Bool {
+        Calendar.current.isDateInToday(viewModel?.date ?? .now)
+    }
+    
     weak var viewModel: DayRecordViewModel? {
         didSet {
             setupSubscriptions()
@@ -45,11 +49,10 @@ class DayRecordView: UIView {
     
     private lazy var imageContainerView: UIView = {
         let view = UIView()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .clear
         view.layer.cornerRadius = 10
         view.clipsToBounds = true
         
-        // TODO: Implementar opção de tirar foto ou escolher da biblioteca
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapImageViewOrAddPhoto))
         view.addGestureRecognizer(tapGesture)
         
@@ -73,7 +76,6 @@ class DayRecordView: UIView {
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(systemName: "camera.shutter.button.fill")?.withTintColor(.primary, renderingMode: .alwaysOriginal)
         imageView.isUserInteractionEnabled = true
         
         return imageView
@@ -151,6 +153,8 @@ class DayRecordView: UIView {
         viewModel?.imagePublisher
             .receive(on: RunLoop.main)
             .sink{ [weak self] image in
+                self?.imageContainerView.backgroundColor = (self?.isToday ?? false) ? .systemPurple : .systemTeal
+                
                 self?.updateImage(
                     image
                     ?? UIImage(systemName: "camera.shutter.button.fill")!
@@ -169,7 +173,10 @@ class DayRecordView: UIView {
     private func setupBasedInputAllowance() {
         guard let viewModel = viewModel else { return }
         
-        if !viewModel.allowsUserInput {
+        if viewModel.allowsUserInput {
+            imageView.image = UIImage(systemName: "camera.shutter.button.fill")?.withTintColor(.primary, renderingMode: .alwaysOriginal)
+            
+        } else {
             weightTextField.isEnabled = false
             weightTextField.placeholder = ""
         }

@@ -10,7 +10,7 @@ import SnapKit
 
 class OnboardingView: UIView {
     
-    var onContinueTap: () -> Void = {}
+    var onContinueTap: (() -> Void)?
     
     private(set) lazy var titleLabel: UILabel = {
         let view = UILabel()
@@ -60,12 +60,13 @@ class OnboardingView: UIView {
         
         let view = UIButton(configuration: config)
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.addTarget(self, action: #selector(didTapContinue), for: .touchUpInside)
         
         return view
     }()
     
     @objc private func didTapContinue() {
-        onContinueTap()
+        onContinueTap?()
     }
     
     override init(frame: CGRect) {

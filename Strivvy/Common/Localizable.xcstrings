@@ -78,6 +78,17 @@
         }
       }
     },
+    "NSUserNotificationUsageDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This will allow Strivvy to remind you, once a day, to save your progress."
+          }
+        }
+      }
+    },
     "OnboardingCalendarDescription" : {
       "extractionState" : "manual",
       "localizations" : {

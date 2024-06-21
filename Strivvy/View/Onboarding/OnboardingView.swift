@@ -10,6 +10,8 @@ import SnapKit
 
 class OnboardingView: UIView {
     
+    var onContinueTap: () -> Void = {}
+    
     private(set) lazy var titleLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -47,12 +49,24 @@ class OnboardingView: UIView {
     
     private(set) lazy var continueButton: UIButton = {
         var config = UIButton.Configuration.filled()
+        config.baseBackgroundColor = .systemTeal
+        config.attributedTitle = AttributedString(
+            LocalizedString.continueTitle,
+            attributes: AttributeContainer([
+                .font: UIFont.preferredFont(forTextStyle: .body).withTraits(traits: .traitBold),
+                .foregroundColor: UIColor.primary
+            ])
+        )
         
         let view = UIButton(configuration: config)
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
     }()
+    
+    @objc private func didTapContinue() {
+        onContinueTap()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -69,19 +83,19 @@ class OnboardingView: UIView {
         let cell1 = OnboardingCell().withElements(
             title: LocalizedString.progressTitle,
             description: LocalizedString.progressDescription,
-            image: UIImage(systemName: "archivebox.circle")!
+            image: UIImage(systemName: "archivebox.circle")!.withTintColor(.systemTeal, renderingMode: .alwaysOriginal)
         )
         
         let cell2 = OnboardingCell().withElements(
             title: LocalizedString.calendarTitle,
             description: LocalizedString.calendarDescription,
-            image: UIImage(systemName: "calendar.circle")!
+            image: UIImage(systemName: "calendar.circle")!.withTintColor(.systemTeal, renderingMode: .alwaysOriginal)
         )
         
         let cell3 = OnboardingCell().withElements(
             title: LocalizedString.notificationTitle,
             description: LocalizedString.notificationTescription,
-            image: UIImage(systemName: "bell.circle")!
+            image: UIImage(systemName: "bell.circle")!.withTintColor(.systemTeal, renderingMode: .alwaysOriginal)
         )
         
         return [cell1, cell2, cell3]
@@ -90,6 +104,7 @@ class OnboardingView: UIView {
     private func addSubviews() {
         addSubview(titleLabel)
         addSubview(cellStackView)
+        addSubview(continueButton)
     }
     
     private func setupConstraints() {
@@ -101,6 +116,12 @@ class OnboardingView: UIView {
         cellStackView.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(54)
             make.left.right.equalToSuperview().inset(32)
+        }
+        
+        continueButton.snp.makeConstraints { make in
+            make.bottom.equalTo(safeAreaLayoutGuide).inset(32).priority(.required)
+            make.left.right.equalToSuperview().inset(32)
+            make.height.equalTo(44)
         }
     }
 }

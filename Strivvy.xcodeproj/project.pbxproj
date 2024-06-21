@@ -14,6 +14,7 @@
 		B354B5E52C23B18F00CEA618 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B354B5E42C23B18F00CEA618 /* OnboardingView.swift */; };
 		B354B5E72C23B2EE00CEA618 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B354B5E62C23B2EE00CEA618 /* OnboardingCell.swift */; };
 		B354B5E92C26238600CEA618 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B354B5E82C26238600CEA618 /* OnboardingViewController.swift */; };
+		B354B5EB2C26333000CEA618 /* UIFont+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B354B5EA2C26333000CEA618 /* UIFont+ext.swift */; };
 		B35CC39B2C0E743B007FBEFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC39A2C0E743B007FBEFC /* AppDelegate.swift */; };
 		B35CC39D2C0E743B007FBEFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC39C2C0E743B007FBEFC /* SceneDelegate.swift */; };
 		B35CC3A42C0E743D007FBEFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35CC3A32C0E743D007FBEFC /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		B354B5E42C23B18F00CEA618 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		B354B5E62C23B2EE00CEA618 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 		B354B5E82C26238600CEA618 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		B354B5EA2C26333000CEA618 /* UIFont+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+ext.swift"; sourceTree = "<group>"; };
 		B35CC3972C0E743B007FBEFC /* Strivvy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strivvy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35CC39A2C0E743B007FBEFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B35CC39C2C0E743B007FBEFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			children = (
 				B35CC3DE2C0EB985007FBEFC /* UIColor+ext.swift */,
 				B354B5E12C17A40800CEA618 /* UIView+ext.swift */,
+				B354B5EA2C26333000CEA618 /* UIFont+ext.swift */,
 			);
 			path = "+ext";
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				B354B5E72C23B2EE00CEA618 /* OnboardingCell.swift in Sources */,
 				B35CC39D2C0E743B007FBEFC /* SceneDelegate.swift in Sources */,
 				B35CC3DC2C0EB87E007FBEFC /* CalendarCell.swift in Sources */,
+				B354B5EB2C26333000CEA618 /* UIFont+ext.swift in Sources */,
 				B33DDB812C11339300ADAF95 /* DayRecordViewModel.swift in Sources */,
 				B354B5E52C23B18F00CEA618 /* OnboardingView.swift in Sources */,
 				B35CC3DF2C0EB985007FBEFC /* UIColor+ext.swift in Sources */,

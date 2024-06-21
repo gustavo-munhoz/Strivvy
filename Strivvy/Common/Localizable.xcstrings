@@ -34,6 +34,17 @@
         }
       }
     },
+    "Continue" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        }
+      }
+    },
     "Friday" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -63,6 +74,72 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "This is required to take pictures and save them inside the app. The camera will only be used when you want to take a picture."
+          }
+        }
+      }
+    },
+    "OnboardingCalendarDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you add a picture or weight to a day, it will become blue. Fill in as many days as you can!"
+          }
+        }
+      }
+    },
+    "OnboardingCalendarTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fill your calendar"
+          }
+        }
+      }
+    },
+    "OnboardingNotificationDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strivvy will remind you once every day to save your progress, if you allow notifications."
+          }
+        }
+      }
+    },
+    "OnboardingNotificationTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Don't miss a day"
+          }
+        }
+      }
+    },
+    "OnboardingProgressDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Take pictures every day to see your transformation over time. Today's date is marked with purple in the calendar."
+          }
+        }
+      }
+    },
+    "OnboardingProgressTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save your progress"
           }
         }
       }
@@ -173,6 +250,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Enter weight"
+          }
+        }
+      }
+    },
+    "Welcome" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome to Strivvy!"
           }
         }
       }

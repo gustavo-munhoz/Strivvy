@@ -47,6 +47,12 @@ class OnboardingCell: UIView {
             ]
         ])
         
+        view.alpha = 0.7
+        view.textColor = .primary
+        
+        view.numberOfLines = -1
+        view.lineBreakMode = .byWordWrapping
+        
         return view
     }()
     
@@ -56,7 +62,7 @@ class OnboardingCell: UIView {
         
         view.axis = .vertical
         view.alignment = .leading
-        view.spacing = 12
+        view.spacing = 4
         
         return view
     }()
@@ -71,6 +77,14 @@ class OnboardingCell: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func withElements(title: String, description: String, image: UIImage) -> OnboardingCell {
+        self.titleLabel.text = title
+        self.descriptionLabel.text = description
+        self.image.image = image
+        
+        return self
+    }
+    
     private func addSubviews() {
         addSubview(image)
         addSubview(textStackView)
@@ -78,8 +92,9 @@ class OnboardingCell: UIView {
     
     private func setupConstraints() {
         image.snp.makeConstraints { make in
-            make.left.top.bottom.equalToSuperview()
-            make.width.equalToSuperview().dividedBy(5)
+            make.left.top.equalToSuperview()
+            make.width.equalTo(UIScreen.main.bounds.width / 7)
+            make.height.equalTo(image.snp.width)
         }
         
         textStackView.snp.makeConstraints { make in

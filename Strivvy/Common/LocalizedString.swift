@@ -29,5 +29,15 @@ struct LocalizedString {
     static let chooseAnOption = String(localized: "ChooseAnOption")
     
     static let cancel = String(localized: "Cancel")
+    static let continueTitle = String(localized: "Continue")
     
+    static let welcome = String(localized: "Welcome")
+    static let progressTitle = String(localized: "OnboardingProgressTitle")
+    static let progressDescription = String(localized: "OnboardingProgressDescription")
+    
+    static let calendarTitle = String(localized: "OnboardingCalendarTitle")
+    static let calendarDescription = String(localized: "OnboardingCalendarDescription")
+    
+    static let notificationTitle = String(localized: "OnboardingNotificationTitle")
+    static let notificationTescription = String(localized: "OnboardingNotificationDescription")
 }

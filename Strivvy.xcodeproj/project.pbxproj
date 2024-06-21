@@ -11,6 +11,8 @@
 		B33DDB7F2C11327200ADAF95 /* DayRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DDB7E2C11327200ADAF95 /* DayRecordViewController.swift */; };
 		B33DDB812C11339300ADAF95 /* DayRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DDB802C11339300ADAF95 /* DayRecordViewModel.swift */; };
 		B354B5E22C17A40800CEA618 /* UIView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B354B5E12C17A40800CEA618 /* UIView+ext.swift */; };
+		B354B5E52C23B18F00CEA618 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B354B5E42C23B18F00CEA618 /* OnboardingView.swift */; };
+		B354B5E72C23B2EE00CEA618 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B354B5E62C23B2EE00CEA618 /* OnboardingCell.swift */; };
 		B35CC39B2C0E743B007FBEFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC39A2C0E743B007FBEFC /* AppDelegate.swift */; };
 		B35CC39D2C0E743B007FBEFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CC39C2C0E743B007FBEFC /* SceneDelegate.swift */; };
 		B35CC3A42C0E743D007FBEFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35CC3A32C0E743D007FBEFC /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		B33DDB7E2C11327200ADAF95 /* DayRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRecordViewController.swift; sourceTree = "<group>"; };
 		B33DDB802C11339300ADAF95 /* DayRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRecordViewModel.swift; sourceTree = "<group>"; };
 		B354B5E12C17A40800CEA618 /* UIView+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ext.swift"; sourceTree = "<group>"; };
+		B354B5E42C23B18F00CEA618 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		B354B5E62C23B2EE00CEA618 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 		B35CC3972C0E743B007FBEFC /* Strivvy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strivvy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35CC39A2C0E743B007FBEFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B35CC39C2C0E743B007FBEFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,15 @@
 				B33DDB7E2C11327200ADAF95 /* DayRecordViewController.swift */,
 			);
 			path = DayRecord;
+			sourceTree = "<group>";
+		};
+		B354B5E32C23B17B00CEA618 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B354B5E42C23B18F00CEA618 /* OnboardingView.swift */,
+				B354B5E62C23B2EE00CEA618 /* OnboardingCell.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		B35CC38E2C0E743B007FBEFC = {
@@ -170,6 +183,7 @@
 		B35CC3D12C0E75AC007FBEFC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B354B5E32C23B17B00CEA618 /* Onboarding */,
 				B33DDB7B2C112D4100ADAF95 /* DayRecord */,
 				B35CC3D52C0E75C8007FBEFC /* Calendar */,
 			);
@@ -377,9 +391,11 @@
 				B35CC39B2C0E743B007FBEFC /* AppDelegate.swift in Sources */,
 				B35CC3E32C100B3D007FBEFC /* LocalizedString.swift in Sources */,
 				B33DDB7D2C112D4B00ADAF95 /* DayRecordView.swift in Sources */,
+				B354B5E72C23B2EE00CEA618 /* OnboardingCell.swift in Sources */,
 				B35CC39D2C0E743B007FBEFC /* SceneDelegate.swift in Sources */,
 				B35CC3DC2C0EB87E007FBEFC /* CalendarCell.swift in Sources */,
 				B33DDB812C11339300ADAF95 /* DayRecordViewModel.swift in Sources */,
+				B354B5E52C23B18F00CEA618 /* OnboardingView.swift in Sources */,
 				B35CC3DF2C0EB985007FBEFC /* UIColor+ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,7 +569,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 7U55BCTM6U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Strivvy/Info.plist;
@@ -584,7 +600,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 7U55BCTM6U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Strivvy/Info.plist;

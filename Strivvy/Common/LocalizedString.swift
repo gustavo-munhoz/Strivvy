@@ -40,4 +40,7 @@ struct LocalizedString {
     
     static let notificationTitle = String(localized: "OnboardingNotificationTitle")
     static let notificationTescription = String(localized: "OnboardingNotificationDescription")
+    
+    static let notificationReminderTitle = String(localized: "NotificationDailyReminderTitle")
+    static let notificationReminderBody = String(localized: "NotificationDailyReminderBody")
 }

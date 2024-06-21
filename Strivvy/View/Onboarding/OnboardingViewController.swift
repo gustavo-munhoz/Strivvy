@@ -32,6 +32,7 @@ class OnboardingViewController: UIViewController {
             DispatchQueue.main.async {
                 if granted {
                     self?.logger.info("User notifications permission granted.")
+                    self?.scheduleDailyNotifications()
                     
                 } else {
                     self?.logger.info("User notifications permission denied.")
@@ -39,6 +40,28 @@ class OnboardingViewController: UIViewController {
                 }
                 
                 self?.dismiss(animated: true)
+            }
+        }
+    }
+    
+    func scheduleDailyNotifications() {
+        let content = UNMutableNotificationContent()
+        content.title = LocalizedString.notificationReminderTitle
+        content.body = LocalizedString.notificationReminderBody
+        content.sound = UNNotificationSound.default
+        
+        var dateComponents = DateComponents()
+        dateComponents.hour = 20
+        dateComponents.minute = 0
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
+        let request = UNNotificationRequest(identifier: "dailyNotification", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { [weak self] error in
+            if let error = error {
+                self?.logger.error("Error scheduling notification: \(error)")
+            } else {
+                self?.logger.info("Notification scheduled successfully.")
             }
         }
     }

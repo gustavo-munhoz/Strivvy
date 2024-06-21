@@ -36,12 +36,23 @@ class CalendarViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        self.present(OnboardingViewController(), animated: true)
+
+        presentOnboardingIfNeeded()
     }
     
     @objc func dayChanged() {
         calendarView.calendarView.reloadData()
+    }
+
+    private func presentOnboardingIfNeeded() {
+        let defaults = UserDefaults.standard
+        let hasShownOnboarding = defaults.bool(forKey: "hasShownOnboarding")
+
+        if !hasShownOnboarding {
+            self.present(OnboardingViewController(), animated: true) {
+                defaults.set(true, forKey: "hasShownOnboarding")
+            }
+        }
     }
 
     

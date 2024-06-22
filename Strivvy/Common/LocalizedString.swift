@@ -19,6 +19,8 @@ struct LocalizedString {
     ]
     
     static let weightLabel = String(localized: "WeightLabel")
+    static let addPicture = String(localized: "AddPicture")
+    static let addWeight = String(localized: "AddWeight")
  
     static let settingsCameraTitle = String(localized: "OpenSettingsTitleCamera")
     static let settingsCameraMessage = String(localized: "OpenSettingsMessageCamera")
@@ -43,4 +45,6 @@ struct LocalizedString {
     
     static let notificationReminderTitle = String(localized: "NotificationDailyReminderTitle")
     static let notificationReminderBody = String(localized: "NotificationDailyReminderBody")
+    
+    
 }

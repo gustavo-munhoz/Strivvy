@@ -39,7 +39,9 @@ class OnboardingViewController: UIViewController {
                     
                 }
                 
-                self?.dismiss(animated: true)
+                self?.dismiss(animated: true) {
+                    UserDefaults.standard.set(true, forKey: "hasShownOnboarding")
+                }
             }
         }
     }

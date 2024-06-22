@@ -47,14 +47,11 @@ class CalendarViewController: UIViewController {
     private func presentOnboardingIfNeeded() {
         let defaults = UserDefaults.standard
         let hasShownOnboarding = defaults.bool(forKey: "hasShownOnboarding")
-
+        
         if !hasShownOnboarding {
-            self.present(OnboardingViewController(), animated: true) {
-                defaults.set(true, forKey: "hasShownOnboarding")
-            }
+            self.present(OnboardingViewController(), animated: true)
         }
     }
-
     
     private func configureCalendarView() {
         logger.debug("Configuring Calendar View...")

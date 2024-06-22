@@ -83,11 +83,17 @@ class DayRecordView: UIView {
     
     private(set) lazy var addPhotoButton: UIButton = {
         var config = UIButton.Configuration.filled()
-        config.baseBackgroundColor = .systemGray
-        config.baseForegroundColor = .primary
+        config.baseBackgroundColor = .systemPurple
+        
+        config.attributedTitle = AttributedString(
+            LocalizedString.addPicture,
+            attributes: AttributeContainer([
+                .font: UIFont.preferredFont(forTextStyle: .body).withTraits(traits: .traitBold),
+                .foregroundColor: UIColor.white
+            ])
+        )
         
         let button = UIButton(configuration: config)
-        button.setTitle("Add Photo", for: .normal)
         button.addTarget(self, action: #selector(didTapImageViewOrAddPhoto), for: .touchUpInside)
         
         button.snp.makeConstraints { make in
@@ -99,11 +105,17 @@ class DayRecordView: UIView {
 
     private lazy var addWeightButton: UIButton = {
         var config = UIButton.Configuration.filled()
-        config.baseBackgroundColor = .systemGray
-        config.baseForegroundColor = .primary
+        config.baseBackgroundColor = .systemPurple
+        
+        config.attributedTitle = AttributedString(
+            LocalizedString.addWeight,
+            attributes: AttributeContainer([
+                .font: UIFont.preferredFont(forTextStyle: .body).withTraits(traits: .traitBold),
+                .foregroundColor: UIColor.white
+            ])
+        )
         
         let button = UIButton(configuration: config)
-        button.setTitle("Add Weight", for: .normal)
         button.addTarget(self, action: #selector(didTapAddWeight), for: .touchUpInside)
 
         button.snp.makeConstraints { make in
@@ -153,7 +165,9 @@ class DayRecordView: UIView {
         viewModel?.imagePublisher
             .receive(on: RunLoop.main)
             .sink{ [weak self] image in
-                self?.imageContainerView.backgroundColor = (self?.isToday ?? false) ? .systemPurple : .systemTeal
+                self?.imageContainerView.backgroundColor = (self?.isToday ?? false)
+                ? .systemPurple.withAlphaComponent(0.5)
+                : .systemTeal.withAlphaComponent(0.5)
                 
                 self?.updateImage(
                     image
@@ -176,6 +190,15 @@ class DayRecordView: UIView {
         if viewModel.allowsUserInput {
             imageView.image = UIImage(systemName: "camera.shutter.button.fill")?.withTintColor(.primary, renderingMode: .alwaysOriginal)
             
+            addSubview(buttonsStackView)
+            buttonsStackView.snp.makeConstraints { make in
+                make.top.equalTo(imageContainerView.snp.bottom).priority(.required)
+                make.centerX.equalTo(safeAreaLayoutGuide).priority(.required)
+                make.height.greaterThanOrEqualTo(120).priority(.required)
+                make.bottom.equalTo(safeAreaLayoutGuide).priority(.high)
+                make.width.equalToSuperview().inset(24)
+            }
+            
         } else {
             weightTextField.isEnabled = false
             weightTextField.placeholder = ""
@@ -186,7 +209,6 @@ class DayRecordView: UIView {
         addSubview(dateLabel)
         addSubview(imageContainerView)
         addSubview(weightTextField)
-        addSubview(buttonsStackView)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
             tapGesture.cancelsTouchesInView = false
@@ -217,14 +239,6 @@ class DayRecordView: UIView {
         imageView.snp.makeConstraints { make in
             make.center.equalToSuperview()
             make.width.height.equalToSuperview()
-        }
-        
-        buttonsStackView.snp.makeConstraints { make in
-            make.top.equalTo(imageContainerView.snp.bottom).priority(.required)
-            make.centerX.equalTo(safeAreaLayoutGuide).priority(.required)
-            make.height.greaterThanOrEqualTo(120).priority(.required)
-            make.bottom.equalTo(safeAreaLayoutGuide).priority(.high)
-            make.width.equalToSuperview().inset(24)
         }
     }
     

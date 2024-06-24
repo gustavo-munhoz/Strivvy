@@ -49,7 +49,7 @@ class CalendarView: UIView {
     
     private func setupConstraints() {
         weekDaysView.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide)
+            make.top.equalTo(safeAreaLayoutGuide).offset(20)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(30)
         }

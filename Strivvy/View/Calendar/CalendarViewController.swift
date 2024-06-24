@@ -37,19 +37,32 @@ class CalendarViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
+        navigationItem.title = "Strivvy"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(
+            image: UIImage(systemName: "questionmark.circle"),
+            style: .done,
+            target: self,
+            action: #selector(presentOnboarding)
+        )
+        
         presentOnboardingIfNeeded()
     }
     
     @objc func dayChanged() {
         calendarView.calendarView.reloadData()
     }
-
+    
+    @objc func presentOnboarding() {
+        self.present(OnboardingViewController(), animated: true)
+    }
+    
     private func presentOnboardingIfNeeded() {
         let defaults = UserDefaults.standard
         let hasShownOnboarding = defaults.bool(forKey: "hasShownOnboarding")
         
         if !hasShownOnboarding {
-            self.present(OnboardingViewController(), animated: true)
+            presentOnboarding()
         }
     }
     

@@ -31,12 +31,18 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCalendarView()
-        NotificationCenter.default.addObserver(self, selector: #selector(dayChanged), name: .NSCalendarDayChanged, object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(dayChanged),
+            name: .NSCalendarDayChanged,
+            object: nil
+        )
+        
+        calendarView.calendarView.scrollToDate(Date(), animateScroll: false)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        calendarView.calendarView.scrollToDate(Date())
     }
     
     override func viewDidAppear(_ animated: Bool) {

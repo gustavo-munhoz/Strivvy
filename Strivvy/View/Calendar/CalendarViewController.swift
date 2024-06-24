@@ -15,7 +15,7 @@ class CalendarViewController: UIViewController {
     private let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: String(describing: CalendarViewController.self))
     
     private var calendarView = CalendarView()
-    
+         
     override func loadView() {
         view = calendarView
     }
@@ -119,6 +119,19 @@ class CalendarViewController: UIViewController {
     @objc func closeSheet() {
         self.dismiss(animated: true)
     }
+    
+    func showToast(message : String, seconds: Double){
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alert.view.backgroundColor = UIColor.black
+        alert.view.alpha = 0.6
+        alert.view.layer.cornerRadius = 15
+
+        self.present(alert, animated: true)
+
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
+            alert.dismiss(animated: true)
+        }
+    }
 }
 
 extension CalendarViewController: JTACMonthViewDataSource {
@@ -165,10 +178,15 @@ extension CalendarViewController: JTACMonthViewDelegate {
         else {
             UIView.animate(withDuration: 0.125, animations: {
                 cell?.backgroundColor = .primary.withAlphaComponent(0.4)
-            }, completion: { _ in
+            }, completion: { [weak self] _ in
                 UIView.animate(withDuration: 0.125) {
                     cell?.backgroundColor = .clear
                 }
+                                                
+                self?.showToast(
+                    message: date > Date() ? LocalizedString.invalidDateFuture : LocalizedString.invalidDateNoRegister,
+                    seconds: 1.67
+                )
             })
         }
     }

@@ -4,22 +4,22 @@
     "AddPicture" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bild hinzufügen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Add Picture"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Adicionar Foto"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bild hinzufügen"
+            "value" : "Añadir imagen"
           }
         },
         "fr" : {
@@ -28,10 +28,10 @@
             "value" : "Ajouter une photo"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Añadir imagen"
+            "value" : "Adicionar Foto"
           }
         }
       }
@@ -39,22 +39,22 @@
     "AddWeight" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gewicht hinzufügen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Add Weight"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Adicionar Peso"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gewicht hinzufügen"
+            "value" : "Añadir peso"
           }
         },
         "fr" : {
@@ -63,10 +63,10 @@
             "value" : "Ajouter du poids"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Añadir peso"
+            "value" : "Adicionar Peso"
           }
         }
       }
@@ -74,22 +74,22 @@
     "Cancel" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancel"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancelar"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abbrechen"
           }
         },
         "fr" : {
@@ -98,7 +98,7 @@
             "value" : "Annuler"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancelar"
@@ -109,22 +109,22 @@
     "ChooseAnOption" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle eine Option"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Choose an option"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Escolha uma opção"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wähle eine Option"
+            "value" : "Elija una opción"
           }
         },
         "fr" : {
@@ -133,10 +133,10 @@
             "value" : "Choisir une option"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Elija una opción"
+            "value" : "Escolha uma opção"
           }
         }
       }
@@ -144,22 +144,22 @@
     "ChooseFromGallery" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aus Galerie wählen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pick From Gallery"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Escolher da Galeria"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aus Galerie wählen"
+            "value" : "Elegir de la galería"
           }
         },
         "fr" : {
@@ -168,10 +168,10 @@
             "value" : "Choisir depuis la galerie"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Elegir de la galería"
+            "value" : "Escolher da Galeria"
           }
         }
       }
@@ -179,22 +179,22 @@
     "Continue" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fortfahren"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Continue"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Continuar"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fortfahren"
           }
         },
         "fr" : {
@@ -203,7 +203,7 @@
             "value" : "Continuer"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Continuar"
@@ -214,22 +214,22 @@
     "Friday" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fr"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fri"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sex"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fr"
+            "value" : "Vie"
           }
         },
         "fr" : {
@@ -238,10 +238,80 @@
             "value" : "Ven"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sex"
+          }
+        }
+      }
+    },
+    "InvalidDateFuture" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This date has yet to come!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta data ainda não chegou!"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieses Datum liegt noch in der Zukunft!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette date n'est pas encore arrivée!"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vie"
+            "value" : "¡Esta fecha aún no ha llegado!"
+          }
+        }
+      }
+    },
+    "InvalidDateNoRegister" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There's no register in this date!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não há registro nesta data!"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es gibt keine Aufzeichnung zu diesem Datum!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il n'y a aucun enregistrement à cette date!"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡No hay registro en esta fecha!"
           }
         }
       }
@@ -249,22 +319,22 @@
     "Monday" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mo"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mon"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Seg"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mo"
+            "value" : "Lun"
           }
         },
         "fr" : {
@@ -273,10 +343,10 @@
             "value" : "Lun"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lun"
+            "value" : "Seg"
           }
         }
       }
@@ -284,22 +354,22 @@
     "NotificationDailyReminderBody" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vergessen Sie nicht, Ihren Fortschritt heute zu registrieren!"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Don't forget to register your progress today!"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Não esqueça de registrar seu progresso hoje!"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vergessen Sie nicht, Ihren Fortschritt heute zu registrieren!"
+            "value" : "¡No olvides registrar tu progreso hoy!"
           }
         },
         "fr" : {
@@ -308,10 +378,10 @@
             "value" : "N'oubliez pas d'enregistrer vos progrès aujourd'hui!"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "¡No olvides registrar tu progreso hoy!"
+            "value" : "Não esqueça de registrar seu progresso hoje!"
           }
         }
       }
@@ -319,22 +389,22 @@
     "NotificationDailyReminderTitle" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tägliche Erinnerung"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Daily Reminder"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lembrete Diário"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tägliche Erinnerung"
+            "value" : "Recordatorio Diario"
           }
         },
         "fr" : {
@@ -343,10 +413,10 @@
             "value" : "Rappel quotidien"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Recordatorio Diario"
+            "value" : "Lembrete Diário"
           }
         }
       }
@@ -354,22 +424,22 @@
     "NSCameraUsageDescription" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dies ist erforderlich, um Bilder zu machen und sie in der App zu speichern. Die Kamera wird nur verwendet, wenn Sie ein Bild machen möchten."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "This is required to take pictures and save them inside the app. The camera will only be used when you want to take a picture."
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Isso é necessário para tirar fotos e salvá-las dentro do app. A câmera só será usada quando você quiser tirar uma foto."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dies ist erforderlich, um Bilder zu machen und sie in der App zu speichern. Die Kamera wird nur verwendet, wenn Sie ein Bild machen möchten."
+            "value" : "Esto es necesario para tomar fotos y guardarlas dentro de la aplicación. La cámara solo se utilizará cuando desee tomar una foto."
           }
         },
         "fr" : {
@@ -378,10 +448,10 @@
             "value" : "Cela est nécessaire pour prendre des photos et les sauvegarder dans l'appli. L'appareil photo ne sera utilisé que lorsque vous voudrez prendre une photo."
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Esto es necesario para tomar fotos y guardarlas dentro de la aplicación. La cámara solo se utilizará cuando desee tomar una foto."
+            "value" : "Isso é necessário para tirar fotos e salvá-las dentro do app. A câmera só será usada quando você quiser tirar uma foto."
           }
         }
       }
@@ -389,22 +459,22 @@
     "NSUserNotificationUsageDescription" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dies ermöglicht es Strivvy, Sie einmal täglich daran zu erinnern, Ihren Fortschritt zu speichern."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "This will allow Strivvy to remind you, once a day, to save your progress."
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Isso permitirá que o Strivvy lhe lembre, uma vez ao dia, de salvar seu progresso."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dies ermöglicht es Strivvy, Sie einmal täglich daran zu erinnern, Ihren Fortschritt zu speichern."
+            "value" : "Esto permitirá que Strivvy te recuerde, una vez al día, guardar tu progreso."
           }
         },
         "fr" : {
@@ -413,10 +483,10 @@
             "value" : "Cela permettra à Strivvy de vous rappeler, une fois par jour, d'enregistrer vos progrès."
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Esto permitirá que Strivvy te recuerde, una vez al día, guardar tu progreso."
+            "value" : "Isso permitirá que o Strivvy lhe lembre, uma vez ao dia, de salvar seu progresso."
           }
         }
       }
@@ -424,22 +494,22 @@
     "OnboardingCalendarDescription" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn Sie einem Tag ein Bild oder Gewicht hinzufügen, wird er blau. Füllen Sie so viele Tage wie möglich aus!"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "If you add a picture or weight to a day, it will become blue. Fill in as many days as you can!"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Se você adicionar uma foto ou peso a um dia, ele se tornará azul. Preencha tantos dias quanto puder!"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wenn Sie einem Tag ein Bild oder Gewicht hinzufügen, wird er blau. Füllen Sie so viele Tage wie möglich aus!"
+            "value" : "Si agregas una imagen o peso a un día, se volverá azul. ¡Llena tantos días como puedas!"
           }
         },
         "fr" : {
@@ -448,10 +518,10 @@
             "value" : "Si vous ajoutez une photo ou un poids à un jour, il deviendra bleu. Remplissez autant de jours que possible!"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Si agregas una imagen o peso a un día, se volverá azul. ¡Llena tantos días como puedas!"
+            "value" : "Se você adicionar uma foto ou peso a um dia, ele se tornará azul. Preencha tantos dias quanto puder!"
           }
         }
       }
@@ -459,22 +529,22 @@
     "OnboardingCalendarTitle" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Füllen Sie Ihren Kalender"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fill your calendar"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Preencha seu calendário"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Füllen Sie Ihren Kalender"
+            "value" : "Llena tu calendario"
           }
         },
         "fr" : {
@@ -483,10 +553,10 @@
             "value" : "Remplissez votre calendrier"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Llena tu calendario"
+            "value" : "Preencha seu calendário"
           }
         }
       }
@@ -494,22 +564,22 @@
     "OnboardingNotificationDescription" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strivvy wird Sie jeden Tag daran erinnern, Ihren Fortschritt zu speichern, wenn Sie Benachrichtigungen zulassen."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Strivvy will remind you once every day to save your progress, if you allow notifications."
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "O Strivvy irá lembrá-lo uma vez por dia para salvar seu progresso, se você permitir notificações."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Strivvy wird Sie jeden Tag daran erinnern, Ihren Fortschritt zu speichern, wenn Sie Benachrichtigungen zulassen."
+            "value" : "Strivvy te recordará una vez al día que guardes tu progreso, si permites las notificaciones."
           }
         },
         "fr" : {
@@ -518,10 +588,10 @@
             "value" : "Strivvy vous rappellera de sauvegarder vos progrès une fois par jour, si vous autorisez les notifications."
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Strivvy te recordará una vez al día que guardes tu progreso, si permites las notificaciones."
+            "value" : "O Strivvy irá lembrá-lo uma vez por dia para salvar seu progresso, se você permitir notificações."
           }
         }
       }
@@ -529,22 +599,22 @@
     "OnboardingNotificationTitle" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verpassen Sie keinen Tag"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Don't miss a day"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Não perca um dia"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verpassen Sie keinen Tag"
+            "value" : "No te pierdas un día"
           }
         },
         "fr" : {
@@ -553,10 +623,10 @@
             "value" : "Ne ratez pas un jour"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No te pierdas un día"
+            "value" : "Não perca um dia"
           }
         }
       }
@@ -564,22 +634,22 @@
     "OnboardingProgressDescription" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Machen Sie jeden Tag Fotos, um Ihre Transformation im Laufe der Zeit zu sehen. Das heutige Datum ist im Kalender mit Lila markiert."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Take pictures every day to see your transformation over time. Today's date is marked with purple in the calendar."
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tire fotos todos os dias para ver sua transformação ao longo do tempo. A data de hoje está marcada com roxo no calendário."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Machen Sie jeden Tag Fotos, um Ihre Transformation im Laufe der Zeit zu sehen. Das heutige Datum ist im Kalender mit Lila markiert."
+            "value" : "Toma fotos todos los días para ver tu transformación a lo largo del tiempo. La fecha de hoy está marcada con púrpura en el calendario."
           }
         },
         "fr" : {
@@ -588,10 +658,10 @@
             "value" : "Prenez des photos tous les jours pour voir votre transformation dans le temps. La date du jour est marquée en violet dans le calendrier."
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Toma fotos todos los días para ver tu transformación a lo largo del tiempo. La fecha de hoy está marcada con púrpura en el calendario."
+            "value" : "Tire fotos todos os dias para ver sua transformação ao longo do tempo. A data de hoje está marcada com roxo no calendário."
           }
         }
       }
@@ -599,22 +669,22 @@
     "OnboardingProgressTitle" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speichern Sie Ihren Fortschritt"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Save your progress"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Salve seu progresso"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Speichern Sie Ihren Fortschritt"
+            "value" : "Guarda tu progreso"
           }
         },
         "fr" : {
@@ -623,10 +693,10 @@
             "value" : "Sauvegardez vos progrès"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Guarda tu progreso"
+            "value" : "Salve seu progresso"
           }
         }
       }
@@ -634,22 +704,22 @@
     "OpenSettingsAlertTitle" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen öffnen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open Settings"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Abrir Configurações"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Einstellungen öffnen"
+            "value" : "Abrir ajustes"
           }
         },
         "fr" : {
@@ -658,10 +728,10 @@
             "value" : "Ouvrir les paramètres"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Abrir ajustes"
+            "value" : "Abrir Configurações"
           }
         }
       }
@@ -669,22 +739,22 @@
     "OpenSettingsMessageCamera" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese App benötigt Zugriff auf die Kamera. Bitte öffnen Sie die Einstellungen und aktivieren Sie die Kamera."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "This app requires camera access. Please, open Settings and enable camera."
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Este aplicativo requer acesso à câmera. Por favor, abra as Configurações e habilite a câmera."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Diese App benötigt Zugriff auf die Kamera. Bitte öffnen Sie die Einstellungen und aktivieren Sie die Kamera."
+            "value" : "Esta aplicación requiere acceso a la cámara. Por favor, abre Ajustes y activa la cámara."
           }
         },
         "fr" : {
@@ -693,10 +763,10 @@
             "value" : "Cette application nécessite un accès à la caméra. Veuillez ouvrir les paramètres et activer la caméra."
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Esta aplicación requiere acceso a la cámara. Por favor, abre Ajustes y activa la cámara."
+            "value" : "Este aplicativo requer acesso à câmera. Por favor, abra as Configurações e habilite a câmera."
           }
         }
       }
@@ -704,22 +774,22 @@
     "OpenSettingsTitleCamera" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kamerazugriff erforderlich"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Camera Access Required"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Acesso à câmera necessário"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kamerazugriff erforderlich"
+            "value" : "Se requiere acceso a la cámara"
           }
         },
         "fr" : {
@@ -728,10 +798,10 @@
             "value" : "Accès à la caméra requis"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Se requiere acceso a la cámara"
+            "value" : "Acesso à câmera necessário"
           }
         }
       }
@@ -739,22 +809,22 @@
     "Saturday" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sa"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sat"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sáb"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sa"
           }
         },
         "fr" : {
@@ -763,7 +833,7 @@
             "value" : "Sam"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sáb"
@@ -774,22 +844,22 @@
     "Sunday" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "So"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sun"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dom"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "So"
           }
         },
         "fr" : {
@@ -798,7 +868,7 @@
             "value" : "Dim"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dom"
@@ -809,22 +879,22 @@
     "TakePicture" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto machen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Take Picture"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tirar Foto"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Foto machen"
+            "value" : "Tomar foto"
           }
         },
         "fr" : {
@@ -833,10 +903,10 @@
             "value" : "Prendre une photo"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tomar foto"
+            "value" : "Tirar Foto"
           }
         }
       }
@@ -844,22 +914,22 @@
     "Thursday" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thu"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Qui"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Do"
+            "value" : "Jue"
           }
         },
         "fr" : {
@@ -868,10 +938,10 @@
             "value" : "Jeu"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jue"
+            "value" : "Qui"
           }
         }
       }
@@ -879,22 +949,22 @@
     "Tuesday" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tue"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ter"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Di"
+            "value" : "Mar"
           }
         },
         "fr" : {
@@ -903,10 +973,10 @@
             "value" : "Mar"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mar"
+            "value" : "Ter"
           }
         }
       }
@@ -914,22 +984,22 @@
     "Wednesday" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mi"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wed"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Qua"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mi"
+            "value" : "Mié"
           }
         },
         "fr" : {
@@ -938,10 +1008,10 @@
             "value" : "Mer"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mié"
+            "value" : "Qua"
           }
         }
       }
@@ -949,22 +1019,22 @@
     "WeightLabel" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gewicht eingeben"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Enter weight"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Inserir peso"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gewicht eingeben"
+            "value" : "Ingresar peso"
           }
         },
         "fr" : {
@@ -973,10 +1043,10 @@
             "value" : "Entrer le poids"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ingresar peso"
+            "value" : "Inserir peso"
           }
         }
       }
@@ -984,22 +1054,22 @@
     "Welcome" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Willkommen bei Strivvy!"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Welcome to Strivvy!"
           }
         },
-        "pt-BR" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bem-vindo ao Strivvy!"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Willkommen bei Strivvy!"
+            "value" : "¡Bienvenido a Strivvy!"
           }
         },
         "fr" : {
@@ -1008,10 +1078,10 @@
             "value" : "Bienvenue chez Strivvy!"
           }
         },
-        "es" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "¡Bienvenido a Strivvy!"
+            "value" : "Bem-vindo ao Strivvy!"
           }
         }
       }

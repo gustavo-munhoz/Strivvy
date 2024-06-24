@@ -46,5 +46,6 @@ struct LocalizedString {
     static let notificationReminderTitle = String(localized: "NotificationDailyReminderTitle")
     static let notificationReminderBody = String(localized: "NotificationDailyReminderBody")
     
-    
+    static let invalidDateNoRegister = String(localized: "InvalidDateNoRegister")
+    static let invalidDateFuture = String(localized: "InvalidDateFuture")
 }

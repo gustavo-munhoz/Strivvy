@@ -160,13 +160,17 @@ extension CalendarViewController: JTACMonthViewDelegate {
     }
     
     func calendar(_ calendar: JTACMonthView, didSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
-        presentDayRecordView(for: date)
-    }
-    
-    func calendar(_ calendar: JTACMonthView, shouldSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) -> Bool {
-        if Calendar.current.isDateInToday(date) { return true }
-            
-        return date <= Date() && hasRecord(for: date)
+        if hasRecord(for: date) || Calendar.current.isDateInToday(date) { presentDayRecordView(for: date) }
+        
+        else {
+            UIView.animate(withDuration: 0.125, animations: {
+                cell?.backgroundColor = .primary.withAlphaComponent(0.4)
+            }, completion: { _ in
+                UIView.animate(withDuration: 0.125) {
+                    cell?.backgroundColor = .clear
+                }
+            })
+        }
     }
     
     func calendar(_ calendar: JTAppleCalendar.JTACMonthView, cellForItemAt date: Date, cellState: JTAppleCalendar.CellState, indexPath: IndexPath) -> JTAppleCalendar.JTACDayCell {
@@ -198,22 +202,15 @@ extension CalendarViewController: JTACMonthViewDelegate {
     private func handleCellAppearance(cell: CalendarCell, cellState: CellState, date: Date) {
         cell.backgroundColor = .clear
         cell.contentView.alpha = (cellState.dateBelongsTo == .thisMonth && date <= Date()) ? 1 : 0.5
+        cell.layer.cornerRadius = min(cell.frame.size.width, cell.frame.size.height) / 2 - 4
+        cell.clipsToBounds = true
+        cell.layer.masksToBounds = true
         
         if Calendar.current.isDateInToday(date) {
             cell.backgroundColor = .systemPurple
-            cell.layer.cornerRadius = min(cell.frame.size.width, cell.frame.size.height) / 2 - 4
-            cell.clipsToBounds = true
-            cell.layer.masksToBounds = true
         }
-        
-        else if hasRecord(for: date) {
-            cell.backgroundColor = .systemTeal
-            cell.layer.cornerRadius = min(cell.frame.size.width, cell.frame.size.height) / 2 - 4
-            cell.clipsToBounds = true
-            cell.layer.masksToBounds = true
-            
-        } else {
-            cell.layer.cornerRadius = 0
+        else {
+            cell.backgroundColor = hasRecord(for: date) ? .systemTeal : .clear
         }
     }
 }

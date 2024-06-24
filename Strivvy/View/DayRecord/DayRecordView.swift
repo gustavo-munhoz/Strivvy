@@ -297,9 +297,13 @@ class DayRecordView: UIView {
     
     private func configure(with date: Date) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM dd, yyyy"
+        dateFormatter.locale = Locale.current
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .none
+
         dateLabel.text = dateFormatter.string(from: date)
     }
+
     
     @objc private func didTapImageViewOrAddPhoto() {
         guard !isEditingWeight else {

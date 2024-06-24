@@ -34,6 +34,11 @@ class CalendarViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(dayChanged), name: .NSCalendarDayChanged, object: nil)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        calendarView.calendarView.scrollToDate(Date())
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -112,9 +117,25 @@ class CalendarViewController: UIViewController {
 
 extension CalendarViewController: JTACMonthViewDataSource {
     func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
-        // TODO: Depois de pronto, arrumar as datas iniciais
-        let startDate = Date()
-        let endDate = Calendar.current.date(byAdding: .month, value: 3, to: startDate)!
+        guard let startDate = UserDefaults.standard.object(forKey: "FirstOpenDate") as? Date else {
+            logger.error("First open date is not registered.")
+            
+            let startDate = Date()
+            
+            return ConfigurationParameters(
+                startDate: startDate,
+                endDate: Calendar.current.date(byAdding: .month, value: 3, to: startDate)!,
+                generateInDates: .forAllMonths,
+                generateOutDates: .off,
+                firstDayOfWeek: .sunday,
+                hasStrictBoundaries: true
+            )
+        }
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy MM dd"
+    
+        let endDate = formatter.date(from: "2100 12 31")!
         
         return ConfigurationParameters(
             startDate: startDate,

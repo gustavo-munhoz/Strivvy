@@ -9,6 +9,30 @@
             "state" : "translated",
             "value" : "Add Picture"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adicionar Foto"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bild hinzufügen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter une photo"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añadir imagen"
+          }
         }
       }
     },
@@ -19,6 +43,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Add Weight"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adicionar Peso"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gewicht hinzufügen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter du poids"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añadir peso"
           }
         }
       }
@@ -31,6 +79,30 @@
             "state" : "translated",
             "value" : "Cancel"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuler"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
+          }
         }
       }
     },
@@ -41,6 +113,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Choose an option"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escolha uma opção"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle eine Option"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisir une option"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elija una opción"
           }
         }
       }
@@ -53,6 +149,30 @@
             "state" : "translated",
             "value" : "Pick From Gallery"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escolher da Galeria"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aus Galerie wählen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisir depuis la galerie"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elegir de la galería"
+          }
         }
       }
     },
@@ -63,6 +183,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Continue"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuar"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fortfahren"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuar"
           }
         }
       }
@@ -75,6 +219,30 @@
             "state" : "translated",
             "value" : "Fri"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sex"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fr"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ven"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vie"
+          }
         }
       }
     },
@@ -85,6 +253,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mon"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seg"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lun"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lun"
           }
         }
       }
@@ -97,6 +289,30 @@
             "state" : "translated",
             "value" : "Don't forget to register your progress today!"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não esqueça de registrar seu progresso hoje!"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vergessen Sie nicht, Ihren Fortschritt heute zu registrieren!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N'oubliez pas d'enregistrer vos progrès aujourd'hui!"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡No olvides registrar tu progreso hoy!"
+          }
         }
       }
     },
@@ -107,6 +323,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Daily Reminder"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lembrete Diário"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tägliche Erinnerung"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rappel quotidien"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recordatorio Diario"
           }
         }
       }
@@ -119,6 +359,30 @@
             "state" : "translated",
             "value" : "This is required to take pictures and save them inside the app. The camera will only be used when you want to take a picture."
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Isso é necessário para tirar fotos e salvá-las dentro do app. A câmera só será usada quando você quiser tirar uma foto."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dies ist erforderlich, um Bilder zu machen und sie in der App zu speichern. Die Kamera wird nur verwendet, wenn Sie ein Bild machen möchten."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cela est nécessaire pour prendre des photos et les sauvegarder dans l'appli. L'appareil photo ne sera utilisé que lorsque vous voudrez prendre une photo."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esto es necesario para tomar fotos y guardarlas dentro de la aplicación. La cámara solo se utilizará cuando desee tomar una foto."
+          }
         }
       }
     },
@@ -129,6 +393,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "This will allow Strivvy to remind you, once a day, to save your progress."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Isso permitirá que o Strivvy lhe lembre, uma vez ao dia, de salvar seu progresso."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dies ermöglicht es Strivvy, Sie einmal täglich daran zu erinnern, Ihren Fortschritt zu speichern."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cela permettra à Strivvy de vous rappeler, une fois par jour, d'enregistrer vos progrès."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esto permitirá que Strivvy te recuerde, una vez al día, guardar tu progreso."
           }
         }
       }
@@ -141,6 +429,30 @@
             "state" : "translated",
             "value" : "If you add a picture or weight to a day, it will become blue. Fill in as many days as you can!"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se você adicionar uma foto ou peso a um dia, ele se tornará azul. Preencha tantos dias quanto puder!"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn Sie einem Tag ein Bild oder Gewicht hinzufügen, wird er blau. Füllen Sie so viele Tage wie möglich aus!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si vous ajoutez une photo ou un poids à un jour, il deviendra bleu. Remplissez autant de jours que possible!"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si agregas una imagen o peso a un día, se volverá azul. ¡Llena tantos días como puedas!"
+          }
         }
       }
     },
@@ -151,6 +463,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fill your calendar"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preencha seu calendário"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Füllen Sie Ihren Kalender"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remplissez votre calendrier"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Llena tu calendario"
           }
         }
       }
@@ -163,6 +499,30 @@
             "state" : "translated",
             "value" : "Strivvy will remind you once every day to save your progress, if you allow notifications."
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Strivvy irá lembrá-lo uma vez por dia para salvar seu progresso, se você permitir notificações."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strivvy wird Sie jeden Tag daran erinnern, Ihren Fortschritt zu speichern, wenn Sie Benachrichtigungen zulassen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strivvy vous rappellera de sauvegarder vos progrès une fois par jour, si vous autorisez les notifications."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strivvy te recordará una vez al día que guardes tu progreso, si permites las notificaciones."
+          }
         }
       }
     },
@@ -173,6 +533,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Don't miss a day"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não perca um dia"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verpassen Sie keinen Tag"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ne ratez pas un jour"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No te pierdas un día"
           }
         }
       }
@@ -185,6 +569,30 @@
             "state" : "translated",
             "value" : "Take pictures every day to see your transformation over time. Today's date is marked with purple in the calendar."
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tire fotos todos os dias para ver sua transformação ao longo do tempo. A data de hoje está marcada com roxo no calendário."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Machen Sie jeden Tag Fotos, um Ihre Transformation im Laufe der Zeit zu sehen. Das heutige Datum ist im Kalender mit Lila markiert."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prenez des photos tous les jours pour voir votre transformation dans le temps. La date du jour est marquée en violet dans le calendrier."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toma fotos todos los días para ver tu transformación a lo largo del tiempo. La fecha de hoy está marcada con púrpura en el calendario."
+          }
         }
       }
     },
@@ -195,6 +603,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Save your progress"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salve seu progresso"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speichern Sie Ihren Fortschritt"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sauvegardez vos progrès"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guarda tu progreso"
           }
         }
       }
@@ -207,6 +639,30 @@
             "state" : "translated",
             "value" : "Open Settings"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir Configurações"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen öffnen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir les paramètres"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir ajustes"
+          }
         }
       }
     },
@@ -217,6 +673,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "This app requires camera access. Please, open Settings and enable camera."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este aplicativo requer acesso à câmera. Por favor, abra as Configurações e habilite a câmera."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese App benötigt Zugriff auf die Kamera. Bitte öffnen Sie die Einstellungen und aktivieren Sie die Kamera."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette application nécessite un accès à la caméra. Veuillez ouvrir les paramètres et activer la caméra."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta aplicación requiere acceso a la cámara. Por favor, abre Ajustes y activa la cámara."
           }
         }
       }
@@ -229,6 +709,30 @@
             "state" : "translated",
             "value" : "Camera Access Required"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acesso à câmera necessário"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kamerazugriff erforderlich"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accès à la caméra requis"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se requiere acceso a la cámara"
+          }
         }
       }
     },
@@ -239,6 +743,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sat"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sáb"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sa"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sam"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sáb"
           }
         }
       }
@@ -251,6 +779,30 @@
             "state" : "translated",
             "value" : "Sun"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dom"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "So"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dim"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dom"
+          }
         }
       }
     },
@@ -261,6 +813,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Take Picture"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tirar Foto"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto machen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prendre une photo"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tomar foto"
           }
         }
       }
@@ -273,6 +849,30 @@
             "state" : "translated",
             "value" : "Thu"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Qui"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeu"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jue"
+          }
         }
       }
     },
@@ -283,6 +883,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tue"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ter"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mar"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mar"
           }
         }
       }
@@ -295,6 +919,30 @@
             "state" : "translated",
             "value" : "Wed"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Qua"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mi"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mié"
+          }
         }
       }
     },
@@ -306,6 +954,30 @@
             "state" : "translated",
             "value" : "Enter weight"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inserir peso"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gewicht eingeben"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entrer le poids"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingresar peso"
+          }
         }
       }
     },
@@ -316,6 +988,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Welcome to Strivvy!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bem-vindo ao Strivvy!"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Willkommen bei Strivvy!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bienvenue chez Strivvy!"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Bienvenido a Strivvy!"
           }
         }
       }

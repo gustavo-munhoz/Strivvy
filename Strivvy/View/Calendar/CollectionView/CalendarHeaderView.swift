@@ -46,6 +46,6 @@ class CalendarHeaderView: JTACMonthReusableView {
     func configure(with date: Date) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM yyyy"
-        titleLabel.text = dateFormatter.string(from: date)
+        titleLabel.text = dateFormatter.string(from: date).capitalized
     }
 }
